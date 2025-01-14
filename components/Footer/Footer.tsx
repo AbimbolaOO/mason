@@ -47,7 +47,7 @@ const footerNav: IFooterNav[] = [
 
 export default function Footer() {
   return (
-    <footer className='bg-white border border-red-700 h-[100vh] flex pb-10 top-0 sticky flex-col justify-between'>
+    <footer className='bg-white h-[100vh] flex pb-10 top-0 sticky flex-col justify-between'>
       <Header footer />
       <div className='flex flex-col gap-[148.7px] px-20'>
         <div className='grid grid-cols-[59%_41%]'>
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
 
         {/* Copy write area */}
-        <div className='flex justify-between text-lg leading-[21.28px] border'>
+        <div className='flex justify-between text-lg leading-[21.28px]'>
           <div>Privacy Policy | Terms of Service</div>
           <div>
             &copy; {new Date().getFullYear()} Mason Atlantic. All rights
