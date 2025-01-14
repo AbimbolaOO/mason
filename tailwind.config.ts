@@ -8,11 +8,21 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'adventPro': ['var(--font-adventPro)'],
+      },
+      height: {
+        // 'web-footer-heigh': 'calc(100vh - 50px)',
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "mason-black": '#0F0F0F',
+        "mason-placeholder": 'rgba(15, 15, 15, 0.2)',
+        "mason-border-grey": "rgba(15, 15, 15, 0.05)",
+        "mason-error": "rgba(216, 35, 29, 1)",
+        "mason-tert-text": "#6C6D71"
       },
     },
   },
   plugins: [],
 } satisfies Config;
+
