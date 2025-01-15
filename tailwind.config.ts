@@ -16,10 +16,14 @@ export default {
       },
       colors: {
         "mason-black": '#0F0F0F',
+        "mason-grey": "#6C6D71",
         "mason-placeholder": 'rgba(15, 15, 15, 0.2)',
         "mason-border-grey": "rgba(15, 15, 15, 0.05)",
+        "mason-border": "#EAEAEA",
         "mason-error": "rgba(216, 35, 29, 1)",
-        "mason-tert-text": "#6C6D71"
+        "mason-tert-text": "#6C6D71",
+        "mason-red": "#D8231D",
+        "mason-stroke": "292D32"
       },
     },
   },
