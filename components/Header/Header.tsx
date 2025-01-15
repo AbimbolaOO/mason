@@ -58,7 +58,9 @@ export default function Header({ footer = false }: HeaderProps) {
         <Link href={'book-a-free-consultation'}>
           <button
             className={clsx(
-              !footer ? 'bg-whit' : 'text-white bg-mason-black',
+              !footer
+                ? 'bg-white text-mason-black'
+                : 'text-white bg-mason-black',
               `rounded-lg px-4 py-3  text-[15px] leading-5`
             )}
           >
