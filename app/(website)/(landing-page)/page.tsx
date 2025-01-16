@@ -2,6 +2,8 @@ import FutureProofDigitalSolutions from './FutureProofDigitalSolutions/FuturePro
 import GlobalOrganization from './GlobalOrganization/GlobalOrganization';
 import Hero from './Hero/Hero';
 import Industries from './Industries/Industries';
+import Projects from './Projects/Projects';
+import ReachOutToUs from './ReachOutToUs/ReachOutToUs';
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <GlobalOrganization />
       <FutureProofDigitalSolutions />
       <Industries />
+      <Projects />
+      <ReachOutToUs />
     </div>
   );
 }
