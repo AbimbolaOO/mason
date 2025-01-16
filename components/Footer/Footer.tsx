@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from '../Header/Header';
-import SubmitArrowIcon from '../Icons/SubmitArrowIcon';
+import ArrowRightIcon from '../Icons/ArrowRightIcon';
 
 interface IData {
   label: string;
@@ -120,7 +120,7 @@ const EmailSection = () => {
             type='submit'
             className='peer-invalid:cursor-not-allowed py-5 px-4 cursor-pointer'
           >
-            <SubmitArrowIcon />
+            <ArrowRightIcon />
           </button>
         </form>
       </div>

@@ -12,7 +12,7 @@ export default {
         'adventPro': ['var(--font-adventPro)'],
       },
       height: {
-        // 'web-footer-heigh': 'calc(100vh - 50px)',
+        'screen-minus-header': 'calc(100vh - 88px)',
       },
       colors: {
         "mason-black": '#0F0F0F',
@@ -23,7 +23,8 @@ export default {
         "mason-error": "rgba(216, 35, 29, 1)",
         "mason-tert-text": "#6C6D71",
         "mason-red": "#D8231D",
-        "mason-stroke": "292D32"
+        "mason-stroke": "292D32",
+        "mason-icon-bg": "rgba(216, 35, 29, 0.1)"
       },
     },
   },

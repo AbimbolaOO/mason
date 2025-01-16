@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SubmitArrowIcon = () => {
+const ArrowRightIcon = () => {
   return (
     <svg
       width='28'
@@ -17,4 +17,4 @@ const SubmitArrowIcon = () => {
   );
 };
 
-export default SubmitArrowIcon;
+export default ArrowRightIcon;

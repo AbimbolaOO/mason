@@ -70,7 +70,7 @@ export const Accordion: React.FC<
       <div className='ml-10 relative'>
         <Image
           src={`/static/img/${imageList ? imageList[state.index]?.imageName : ''}.png`}
-          alt='background image'
+          alt='accordion image'
           width={600}
           height={600}
           priority

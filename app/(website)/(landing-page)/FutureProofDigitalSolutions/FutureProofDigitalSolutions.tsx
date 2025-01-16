@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Accordion, AccordionCell } from '@/components/Accordion/Accordion';
+import TitleCard from '@/components/Cards/TitleCard/TitleCard';
 
 import { accordionImages, solutionData } from './SolutionsData';
 
@@ -8,14 +9,10 @@ export default function FutureProofDigitalSolutions() {
   return (
     <div className='flex flex-col px-20 border border-yellow-300 gap-[100px] pb-[100px]'>
       {/* Title */}
-      <div className='flex flex-col'>
-        <div className='font-adventPro font-medium text-[100px] leading-[119.6px]'>
-          Future-Proof Digital Solutions
-        </div>
-        <div className='text-[35px] leading-[50px]'>
-          Industry best practices and scalable solutions for optimal outcomes
-        </div>
-      </div>
+      <TitleCard
+        title='Future-Proof Digital Solutions'
+        description='Industry best practices and scalable solutions for optimal outcomes'
+      />
 
       {/* Accordion Area*/}
       <div className=''>
