@@ -26,6 +26,7 @@ const ReachOutToUs = () => {
           </div>
           <div className='font-medium font-adventPro text-[100px] leading-[150px] text-white'>
             <Link href='contact-us'>Reach Out to Us!</Link>
+            <div className='h-2 w-full origin-left bg-white rounded-full -mt-6'></div>
           </div>
         </div>
 
