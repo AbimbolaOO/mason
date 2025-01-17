@@ -7,8 +7,8 @@ import ChevronArrowDownIcon from '../Icons/ChevronArrowDownIcon';
 
 interface IAccordion {
   title: string;
-  children: any;
-  handleStateChange?: any;
+  children: React.ReactNode;
+  handleStateChange?: (index: number) => void;
   index?: number;
   isOpen?: boolean;
   imageList?: { imageName: string }[];
@@ -21,11 +21,14 @@ export enum AccordionReducerActionType {
 
 interface IAccordionReducerActionType {
   type: AccordionReducerActionType;
-  payload: any;
+  payload: { index: number };
 }
 
 // Reducers
-function accordionReducer(state: any, action: IAccordionReducerActionType) {
+function accordionReducer(
+  state: { index: number },
+  action: IAccordionReducerActionType
+) {
   switch (action.type) {
     case AccordionReducerActionType.CLICKED_SECTION:
       // if (state.index === action.payload.index) {
@@ -46,7 +49,7 @@ export const Accordion: React.FC<
     index: 0,
   });
 
-  const handleStateChange = (index: any) => {
+  const handleStateChange = (index: number) => {
     dispatch({
       type: AccordionReducerActionType.CLICKED_SECTION,
       payload: { index },
@@ -56,14 +59,17 @@ export const Accordion: React.FC<
   return (
     <div className='grid grid-cols-2'>
       <div className='flex flex-col'>
-        {React.Children.map(children, (child: any, index) => {
-          const isOpen = index === state.index ? true : false;
-          return React.cloneElement(child, {
-            ...child.props,
-            handleStateChange,
-            index,
-            isOpen,
-          });
+        {React.Children.map(children, (child, index) => {
+          if (React.isValidElement<IAccordion>(child)) {
+            const isOpen = index === state.index ? true : false;
+            return React.cloneElement(child, {
+              ...child.props,
+              handleStateChange,
+              index,
+              isOpen,
+            });
+          }
+          return null; // Skip invalid children
         })}
       </div>
 
@@ -92,7 +98,9 @@ export const AccordionCell: React.FC<IAccordion> = ({
     <div className='flex flex-col border-b-[1px] border-mason-border '>
       {/* Header text */}
       <div
-        onClick={() => handleStateChange(index)}
+        onClick={() =>
+          handleStateChange && index !== undefined && handleStateChange(index)
+        }
         className={clsx(
           'flex items-center justify-between py-4 pr-4',
           isOpen ? 'cursor-default' : 'cursor-pointer',

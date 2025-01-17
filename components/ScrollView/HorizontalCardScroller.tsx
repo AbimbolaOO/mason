@@ -17,13 +17,12 @@ interface HorizontalCardScrollerProps {
 const HorizontalCardScroller: React.FC<HorizontalCardScrollerProps> = ({
   cellData,
 }) => {
-  const sliderContainer = useRef<any>(null);
+  const sliderContainer = useRef<HTMLDivElement | null>(null);
   const handleArrowBtnClick = (direction: string) => {
     if (sliderContainer) {
       console.log('sliderContainer-->', sliderContainer?.current?.offsetWidth);
     }
     console.log('LEFT-->', direction);
-    document.getElementById;
   };
 
   return (
