@@ -1,17 +1,31 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 import ArrowDownIcon from '@/components/Icons/ArrowDownIcon';
 
 const ReachOutToUs = () => {
   return (
-    <div className='border border-red-600 h-[100vh] bg-mason-black'>
+    <div className='border border-red-600 h-[100vh] bg-black'>
+      {/* paper bottom */}
+      <div className='h-[140px] relative border border-green-700 grid place-content-center -mt-[70px]'>
+        <Image
+          src='/static/img/bottom-paper-strip.png'
+          alt='paper strip'
+          fill
+          priority
+          className='object-cover object-center'
+        />
+      </div>
+
+      {/* main content */}
       <div className='w-full h-full border border-purple-700 grid place-content-center gap-[177px]'>
         <div className='flex justify-center items-center flex-col border border-red-500'>
           <div className='text-[35px] leading-[41px] text-white'>
             Ready to bring your projects to life?
           </div>
           <div className='font-medium font-adventPro text-[100px] leading-[150px] text-white'>
-            Reach Out to Us!
+            <Link href='contact-us'>Reach Out to Us!</Link>
           </div>
         </div>
 

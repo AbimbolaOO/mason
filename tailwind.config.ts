@@ -24,7 +24,8 @@ export default {
         "mason-tert-text": "#6C6D71",
         "mason-red": "#D8231D",
         "mason-stroke": "292D32",
-        "mason-icon-bg": "rgba(216, 35, 29, 0.1)"
+        "mason-icon-bg": "rgba(216, 35, 29, 0.1)",
+        "mason-border-transparent": "rgba(217, 217, 217, 0.5)",
       },
     },
   },
