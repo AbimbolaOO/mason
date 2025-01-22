@@ -16,7 +16,6 @@ interface ICellData {
   description: string;
   imageName: string;
 }
-
 interface HorizontalCardScrollerProps {
   cellData: ICellData[];
 }
@@ -27,44 +26,51 @@ const HorizontalCardScroller: React.FC<HorizontalCardScrollerProps> = ({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const sliderContainer = useRef<HTMLDivElement | null>(null);
   const sliderContentGrid = useRef<HTMLDivElement | null>(null);
-  const [currentTranslateX, setCurrentTranslateX] = useState<number>(0);
+  const [slideCounter, setSlideCounter] = useState<number>(0);
 
   const { contextSafe } = useGSAP({
     // dependencies: [slideCounter],
     scope: containerRef,
   });
 
-  const handleArrowBtnClick = contextSafe((direction: 'left' | 'right') => {
-    if (!sliderContainer.current || !sliderContentGrid.current) return;
+  const handleArrowBtnClick = contextSafe((button: string) => {
+    const direction = button === 'right' ? -1 : 1;
+    const frameWidth = Number(sliderContainer?.current?.offsetWidth);
+    const slideGridWidth = Number(sliderContentGrid?.current?.offsetWidth);
+    const sliderContentItemWidth = Number(
+      (document.querySelector('.slider-content-item') as HTMLDivElement)
+        ?.offsetWidth
+    );
 
-    const frameWidth = sliderContainer.current.offsetWidth;
-    const sliderWidth = sliderContentGrid.current.offsetWidth;
-
-    // Scroll by half of the frame width
-    const translateStep = frameWidth / 2;
-
-    // Determine the new translateX value
-    let newTranslateX = currentTranslateX;
-    if (direction === 'right') {
-      newTranslateX = Math.max(
-        currentTranslateX - translateStep,
-        -(sliderWidth - frameWidth) // Prevent overscrolling to the right
-      );
-    } else if (direction === 'left') {
-      newTranslateX = Math.min(
-        currentTranslateX + translateStep,
-        0 // Prevent overscrolling to the left
-      );
+    let translateAmount;
+    if (slideCounter === 0) {
+      translateAmount =
+        sliderContentItemWidth *
+          Math.floor((frameWidth - 80) / sliderContentItemWidth) +
+        80;
+    } else {
+      translateAmount =
+        sliderContentItemWidth *
+        Math.floor(frameWidth / sliderContentItemWidth);
     }
 
-    // Animate the slider and update the state
-    gsap.to(sliderContentGrid.current, {
-      x: newTranslateX,
-      duration: 0.5,
-      ease: 'power3.out',
-    });
+    if (slideCounter === 0 && button === 'left') {
+      translateAmount = 0;
+    }
 
-    setCurrentTranslateX(newTranslateX);
+    translateAmount = translateAmount * direction;
+
+    gsap.to(sliderContentGrid.current, {
+      translateX: () => {
+        // if (slideCounter !== 0) {
+        setSlideCounter(() => slideCounter + 1 * direction);
+        // }
+        return `+=${translateAmount}`;
+      },
+      // translateX: `0`,
+      // translateX: translateAmount,
+      // translateX: translateX,
+    });
   });
 
   return (
@@ -89,11 +95,11 @@ const HorizontalCardScroller: React.FC<HorizontalCardScrollerProps> = ({
       {/* Scroll Cards */}
       <div
         ref={sliderContainer}
-        className='w-full overflow-hidden flex border border-emerald-500 overscroll-x-contain'
+        className='w-full overflow-x-auto flex border border-emerald-500 overscroll-x-contain'
       >
         <div
           ref={sliderContentGrid}
-          className='grid grid-flow-col border border-red-600 pl-[80px]'
+          className='grid grid-flow-col border border-red-600 pl-[80px] slider-container__cells-pack'
         >
           {cellData.map((data, index) => (
             <HorizontalCard key={index} {...data} />
@@ -129,7 +135,7 @@ const HorizontalCard: React.FC<ICellData> = ({
         <div className='text-[15px] leading-[30px]'>{description}</div>
       </div>
 
-      {/* Image part */}
+      {/*  Imag part*/}
       <div className='relative'>
         <Image
           src={`/static/img/${imageName}.png`}
