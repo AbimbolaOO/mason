@@ -1,5 +1,6 @@
 'use client';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 
@@ -9,6 +10,7 @@ import ArrowLeftIcon from '../Icons/ArrowLeftIcon';
 import ArrowRightIcon from '../Icons/ArrowRightIcon';
 
 gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 interface ICellData {
   icon: React.ReactNode;
@@ -33,6 +35,24 @@ const HorizontalCardScroller: React.FC<HorizontalCardScrollerProps> = ({
     // dependencies: [slideCounter],
     scope: containerRef,
   });
+
+  useGSAP(
+    (context, contextSafe) => {
+      const animate = gsap
+        .timeline()
+        .set('.slider-content-item', { opacity: 0 })
+        .from('.slider-content-item', { y: 200, opacity: 1, stagger: 0.2 });
+
+      ScrollTrigger.create({
+        trigger: containerRef.current,
+        start: 'top 25%',
+        // end: 'end 20%',
+        animation: animate,
+        // markers: true,
+      });
+    },
+    { scope: containerRef }
+  );
 
   const handleArrowBtnClick = contextSafe((direction: 'left' | 'right') => {
     if (!sliderContainer.current || !sliderContentGrid.current) return;
@@ -89,12 +109,9 @@ const HorizontalCardScroller: React.FC<HorizontalCardScrollerProps> = ({
       {/* Scroll Cards */}
       <div
         ref={sliderContainer}
-        className='w-full overflow-hidden flex border border-emerald-500 overscroll-x-contain'
+        className='w-full overflow-hidden flex overscroll-x-contain'
       >
-        <div
-          ref={sliderContentGrid}
-          className='grid grid-flow-col border border-red-600 pl-[80px]'
-        >
+        <div ref={sliderContentGrid} className='grid grid-flow-col pl-[80px]'>
           {cellData.map((data, index) => (
             <HorizontalCard key={index} {...data} />
           ))}
