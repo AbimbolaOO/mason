@@ -15,6 +15,7 @@ export default {
         'screen-minus-header': 'calc(100vh - 88px)',
       },
       colors: {
+        "mason-transparency-layer": "rgba(0, 0, 0, 0.65)",
         "mason-black": '#0F0F0F',
         "mason-grey": "#6C6D71",
         "mason-placeholder": 'rgba(15, 15, 15, 0.2)',

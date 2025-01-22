@@ -67,18 +67,7 @@ const ReachOutToUs = () => {
       </div>
 
       {/* Background */}
-      <div className='z-10 h-[100vh] bg-mason-transparency-layer'>
-        {/* paper bottom */}
-        <div className='h-[140px] relative grid place-content-center -mt-[70px]'>
-          <Image
-            src='/static/img/bottom-paper-strip.png'
-            alt='paper strip'
-            fill
-            priority
-            className='object-cover object-center'
-          />
-        </div>
-
+      <div className='z-10 h-screen-minus-header bg-mason-transparency-layer'>
         {/* main content */}
         <div
           ref={container}
