@@ -45,7 +45,7 @@ const HorizontalCardScroller: React.FC<HorizontalCardScrollerProps> = ({
 
       ScrollTrigger.create({
         trigger: containerRef.current,
-        start: 'top 25%',
+        start: 'top 50%',
         // end: 'end 20%',
         animation: animate,
         // markers: true,
