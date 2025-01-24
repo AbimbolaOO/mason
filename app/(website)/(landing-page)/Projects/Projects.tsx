@@ -40,7 +40,7 @@ const Projects = () => {
         start: 'top 0px',
         end: '+=' + amountToScroll,
         animation: animate,
-        markers: true,
+        // markers: true,
         pin: true,
         scrub: 1,
         invalidateOnRefresh: true,
@@ -82,8 +82,7 @@ const Projects = () => {
               '<'
             ),
           onEnter: () => console.log('lol'),
-          markers: true,
-          // scrub: true,
+          // markers: true,
           containerAnimation: animate,
         });
       });
@@ -102,9 +101,9 @@ const Projects = () => {
       </div>
 
       {/* Scroll view */}
-      <div className='bg-blue-700 overflow-x-hidden'>
+      <div className='bg-white overflow-x-hidden'>
         {/* paper top */}
-        <div className='h-[88px] relative grid place-content-center'>
+        <div className='z-10 h-[88px] relative grid place-content-center'>
           <Image
             src='/static/img/top-paper-strip.png'
             alt='paper strip'
@@ -116,11 +115,10 @@ const Projects = () => {
 
         {/* Horizontal scroll section */}
         <div
-          // ref={sliderWrapper}
           ref={containerRef}
-          className='h-[calc(100vh+90px)] bg-mason-black -mt-20 overflow-hidden overscroll-x-contain flex items-center border-cyan-500'
+          className='h-[calc(100vh+90px)] bg-mason-black -mt-20 overflow-hidden overscroll-x-contain flex items-center'
         >
-          <div className='slider-container text-white border-4 border-red-700 grid grid-flow-col'>
+          <div className='slider-container text-white grid grid-flow-col'>
             {ProjectData.map((project, index) => (
               <HorizontalScrollProjectCards {...project} key={index} />
             ))}
@@ -149,10 +147,9 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
   linkToProject,
 }) => {
   return (
-    // <div className='slider-container text-white border-4 border-red-700 grid grid-flow-col'>
     <>
       {/* LEFT TEXT AREA */}
-      <div className='text-white border border-red-400 w-[780px] ml-20'>
+      <div className='text-white  w-[780px] ml-20'>
         {/* Text Area */}
         <div className='text-[20px] leading-[40px] flex flex-col gap-6'>
           {/* Top */}
@@ -183,7 +180,7 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
       </div>
 
       {/* Project Image Area */}
-      <div className='w-[100vw] border border-fuchsia-600 grid p-0 justify-center'>
+      <div className='w-[100vw] grid p-0 justify-center'>
         <Image
           src={`/static/img/${projectImageName}.png`}
           alt={`${projectImageName}`}
@@ -193,9 +190,7 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
           className=''
         />
 
-        {/* <div className='next-prj-container border border-blue-700 w-fit self-center justify-self-center'> */}
         <NextProjectSlide linkToProject={linkToProject} />
-        {/* </div> */}
       </div>
     </>
   );
@@ -203,8 +198,8 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
 
 const NextProjectSlide = ({ linkToProject }: { linkToProject: string }) => {
   return (
-    <div className='next-prj-container border border-blue-700 w-fit self-center justify-self-center'>
-      <div className='next-prj-slide flex gap-[49px] justify-center border border-red-500 w-fit invisible opacity-0'>
+    <div className='next-prj-container w-fit self-center justify-self-center'>
+      <div className='next-prj-slide flex gap-[49px] justify-center w-fit invisible opacity-0'>
         <LaunchProjectBtn linkToProject={linkToProject} />
         <div className='flex flex-col'>
           <div className='text-[15px] leading-[20px] text-mason-grey'>
