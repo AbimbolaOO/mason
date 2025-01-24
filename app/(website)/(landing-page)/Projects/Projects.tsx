@@ -27,7 +27,7 @@ const Projects = () => {
       ) as HTMLDivElement;
       const raceWidth = Number(race.offsetWidth);
       console.log('raceWidth-->>', raceWidth);
-      let amountToScroll = raceWidth - Number(window.innerWidth);
+      const amountToScroll = raceWidth - Number(window.innerWidth);
       const animate = gsap.from('.slider-container', {
         x: -amountToScroll,
         ease: 'none',
