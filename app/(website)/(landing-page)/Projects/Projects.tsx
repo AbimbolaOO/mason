@@ -1,14 +1,51 @@
+'use client';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useRef } from 'react';
 
 import TitleCard from '@/components/Cards/TitleCard/TitleCard';
 import ArrowRightIcon from '@/components/Icons/ArrowRightIcon';
 import DotIcon from '@/components/Icons/DotIcon';
+import { useGSAP } from '@gsap/react';
 
 import { ProjectData } from './ProjectData';
 
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
 const Projects = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  // const sliderWrapper = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(
+    // (context, contextSafe) => {
+    () => {
+      const race = document.querySelector(
+        '.slider-container'
+      ) as HTMLDivElement;
+      const raceWidth = Number(race.offsetWidth);
+      console.log('raceWidth-->>', raceWidth);
+      let amountToScroll = raceWidth - Number(window.innerWidth);
+      const animate = gsap.from('.slider-container', {
+        x: -amountToScroll,
+        ease: 'none',
+      });
+
+      ScrollTrigger.create({
+        trigger: containerRef.current,
+        start: 'top 88px',
+        end: '+=' + amountToScroll,
+        animation: animate,
+        markers: true,
+        pin: true,
+        scrub: 1,
+      });
+    },
+    { scope: containerRef }
+  );
+
   return (
     <div className='flex flex-col justify-center'>
       {/* Title */}
@@ -33,7 +70,11 @@ const Projects = () => {
         </div>
 
         {/* Horizontal scroll section */}
-        <div className='h-[calc(100vh+90px)] bg-mason-black border-4 -mt-20 overflow-x-auto overscroll-x-contain flex items-center'>
+        <div
+          // ref={sliderWrapper}
+          ref={containerRef}
+          className='h-[calc(100vh+90px)] bg-mason-black border-4 -mt-20 overflow-x-auto overscroll-x-contain flex items-center border-red-500'
+        >
           {ProjectData.map((project, index) => (
             <HorizontalScrollProjectCards {...project} key={index} />
           ))}
@@ -61,7 +102,7 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
   linkToProject,
 }) => {
   return (
-    <div className='text-white border-2 border-blue-400 grid grid-flow-col'>
+    <div className='slider-container text-white border-4 border-red-700 grid grid-flow-col'>
       {/* LEFT TEXT AREA */}
       <div className='text-white border border-red-400 w-[780px] ml-20'>
         {/* Text Area */}

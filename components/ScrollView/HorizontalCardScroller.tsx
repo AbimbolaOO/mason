@@ -37,7 +37,7 @@ const HorizontalCardScroller: React.FC<HorizontalCardScrollerProps> = ({
   });
 
   useGSAP(
-    (context, contextSafe) => {
+    () => {
       const animate = gsap
         .timeline()
         .set('.slider-content-item', { opacity: 0 })

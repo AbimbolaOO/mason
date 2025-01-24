@@ -13,7 +13,7 @@ gsap.registerPlugin(useGSAP);
 const Carousel = () => {
   const container = useRef<HTMLDivElement>(null);
   useGSAP(
-    (context, contextSafe) => {
+    (_, contextSafe) => {
       if (!contextSafe) return;
       const element = document.querySelector('.slide') as HTMLElement;
       const elWidth = element ? element.offsetWidth : 0;

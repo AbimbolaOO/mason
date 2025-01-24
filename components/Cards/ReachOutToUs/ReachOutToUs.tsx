@@ -13,7 +13,7 @@ const ReachOutToUs = () => {
   const hoverContainer = useRef<HTMLDivElement>(null);
 
   useGSAP(
-    (context, contextSafe) => {
+    (_, contextSafe) => {
       let onEnter: () => void;
       let onLeave: () => void;
 
