@@ -22,25 +22,70 @@ const Projects = () => {
   useGSAP(
     // (context, contextSafe) => {
     () => {
+      // const next-prj-container = document.querySelector()
       const race = document.querySelector(
         '.slider-container'
       ) as HTMLDivElement;
       const raceWidth = Number(race.offsetWidth);
-      console.log('raceWidth-->>', raceWidth);
+      // console.log('raceWidth-->>', raceWidth);
       const amountToScroll = raceWidth - Number(window.innerWidth);
-      const animate = gsap.from('.slider-container', {
+
+      const animate = gsap.to('.slider-container', {
         x: -amountToScroll,
         ease: 'none',
       });
 
       ScrollTrigger.create({
         trigger: containerRef.current,
-        start: 'top 88px',
+        start: 'top 0px',
         end: '+=' + amountToScroll,
         animation: animate,
         markers: true,
         pin: true,
         scrub: 1,
+        invalidateOnRefresh: true,
+        // pinSpacing: false,
+      });
+
+      const nestSlideBtnSections = gsap.utils.toArray(
+        '.next-prj-container'
+      ) as HTMLElement[];
+
+      nestSlideBtnSections.forEach((section) => {
+        ScrollTrigger.create({
+          trigger: section,
+          start: 'left center',
+          // animation: nestSlide,
+          animation: gsap
+            .timeline({})
+            .to(section.querySelector('.next-prj-slide'), { autoAlpha: 1 })
+            .fromTo(
+              section.querySelector('.launchBtn'),
+              {
+                y: 100,
+                opacity: 0,
+                ease: 'none',
+              },
+              { y: 0, opacity: 1, ease: 'none' },
+              '<'
+            )
+            .to(
+              section.querySelector('.arrow-btn'),
+              {
+                x: 16,
+                opacity: 1,
+                ease: 'elastic.inOut',
+                repeat: -1,
+                duration: 1,
+                yoyo: true,
+              },
+              '<'
+            ),
+          onEnter: () => console.log('lol'),
+          markers: true,
+          // scrub: true,
+          containerAnimation: animate,
+        });
       });
     },
     { scope: containerRef }
@@ -73,11 +118,13 @@ const Projects = () => {
         <div
           // ref={sliderWrapper}
           ref={containerRef}
-          className='h-[calc(100vh+90px)] bg-mason-black border-4 -mt-20 overflow-x-auto overscroll-x-contain flex items-center border-red-500'
+          className='h-[calc(100vh+90px)] bg-mason-black -mt-20 overflow-hidden overscroll-x-contain flex items-center border-cyan-500'
         >
-          {ProjectData.map((project, index) => (
-            <HorizontalScrollProjectCards {...project} key={index} />
-          ))}
+          <div className='slider-container text-white border-4 border-red-700 grid grid-flow-col'>
+            {ProjectData.map((project, index) => (
+              <HorizontalScrollProjectCards {...project} key={index} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -102,7 +149,8 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
   linkToProject,
 }) => {
   return (
-    <div className='slider-container text-white border-4 border-red-700 grid grid-flow-col'>
+    // <div className='slider-container text-white border-4 border-red-700 grid grid-flow-col'>
+    <>
       {/* LEFT TEXT AREA */}
       <div className='text-white border border-red-400 w-[780px] ml-20'>
         {/* Text Area */}
@@ -145,24 +193,28 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
           className=''
         />
 
+        {/* <div className='next-prj-container border border-blue-700 w-fit self-center justify-self-center'> */}
         <NextProjectSlide linkToProject={linkToProject} />
+        {/* </div> */}
       </div>
-    </div>
+    </>
   );
 };
 
 const NextProjectSlide = ({ linkToProject }: { linkToProject: string }) => {
   return (
-    <div className='flex gap-[49px] justify-center'>
-      <LaunchProjectBtn linkToProject={linkToProject} />
-      <div className='flex flex-col'>
-        <div className='text-[15px] leading-[20px] text-mason-grey'>
-          Keep Scrolling to
-        </div>
-        <div className='text-white flex items-center gap-2'>
-          <div className='text-xl leading-[20px]'>Next Project</div>
-          <div className='w-[120px] h-[3px] bg-mason-border-transparent'></div>
-          <ArrowRightIcon currentColor />
+    <div className='next-prj-container border border-blue-700 w-fit self-center justify-self-center'>
+      <div className='next-prj-slide flex gap-[49px] justify-center border border-red-500 w-fit invisible opacity-0'>
+        <LaunchProjectBtn linkToProject={linkToProject} />
+        <div className='flex flex-col'>
+          <div className='text-[15px] leading-[20px] text-mason-grey'>
+            Keep Scrolling to
+          </div>
+          <div className='text-white flex items-center gap-2'>
+            <div className='text-xl leading-[20px]'>Next Project</div>
+            <div className='w-[120px] h-[3px] bg-mason-border-transparent'></div>
+            <ArrowRightIcon currentColor className='arrow-btn' />
+          </div>
         </div>
       </div>
     </div>
@@ -171,7 +223,7 @@ const NextProjectSlide = ({ linkToProject }: { linkToProject: string }) => {
 
 const LaunchProjectBtn = ({ linkToProject }: { linkToProject: string }) => {
   return (
-    <Link href={linkToProject} target='_blank'>
+    <Link href={linkToProject} target='_blank' className='launchBtn'>
       <button className='bg-white rounded-xl text-[15px] leading-[20px] flex gap-2 text-mason-black w-fit py-3 px-4 items-center'>
         Launch Project <DotIcon />
       </button>
