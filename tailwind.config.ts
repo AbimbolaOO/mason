@@ -27,6 +27,8 @@ export default {
         "mason-stroke": "292D32",
         "mason-icon-bg": "rgba(216, 35, 29, 0.1)",
         "mason-border-transparent": "rgba(217, 217, 217, 0.5)",
+        "mason-badge-bg": "rgba(0, 183, 63, 0.1)",
+        "mason-badge-txt": "#00B73F",
       },
     },
   },

@@ -6,13 +6,8 @@ import React from 'react';
 
 import CompanyBlackLogo from '../Icons/CompanyBlackLogo';
 import CompanyLogo from '../Icons/CompanyLogo';
-
-const navLinks = [
-  { href: '/about-us', label: 'About' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/solutions', label: 'Solutions' },
-  { href: '/contact-us', label: 'Contact Us' },
-];
+import ProjectsDropdown from './Projects';
+import SolutionsDropdown from './Solutions';
 
 interface HeaderProps {
   footer?: boolean;
@@ -41,18 +36,29 @@ export default function Header({ footer = false }: HeaderProps) {
         )}
       >
         <div className='flex gap-4 [&>*]:px-2'>
-          {navLinks.map((link, index) => (
-            <Link
-              key={index}
-              href={link.href}
-              className={clsx(
-                pathname.includes(link.href) && 'bg-cyan-950',
-                `flex items-center`
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
+          <Link
+            href={'/about-us'}
+            className={clsx(
+              pathname.includes('/about-us') && 'bg-cyan-950',
+              `flex items-center`
+            )}
+          >
+            About
+          </Link>
+
+          <ProjectsDropdown />
+
+          <SolutionsDropdown />
+
+          <Link
+            href={'/contact-us'}
+            className={clsx(
+              pathname.includes('/contact-us') && 'bg-cyan-950',
+              `flex items-center`
+            )}
+          >
+            Contact Us
+          </Link>
         </div>
 
         <Link href={'book-a-free-consultation'}>
