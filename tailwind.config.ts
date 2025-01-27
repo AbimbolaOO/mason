@@ -8,16 +8,33 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        scrollReverse: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        scroll: 'scroll 45s linear infinite',
+        scrollReverse: 'scrollReverse 38s linear infinite',
+      },
+
       fontFamily: {
         'adventPro': ['var(--font-adventPro)'],
       },
       height: {
         'screen-minus-header': 'calc(100vh - 88px)',
       },
+
       colors: {
         "mason-transparency-layer": "rgba(0, 0, 0, 0.65)",
         "mason-black": '#0F0F0F',
         "mason-grey": "#6C6D71",
+        "mason-grey-light": "rgba(108, 109, 113, 0.3)",
         "mason-placeholder": 'rgba(15, 15, 15, 0.2)',
         "mason-border-grey": "rgba(15, 15, 15, 0.05)",
         "mason-border": "#EAEAEA",
