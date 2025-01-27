@@ -20,7 +20,7 @@ export default function Header({ footer = false }: HeaderProps) {
     <header
       className={clsx(
         !footer ? 'bg-mason-black' : 'bg-white',
-        `flex w-full px-20 py-[22.5px] justify-between top-0 sticky z-20`
+        `flex w-full px-20 py-[22.5px] justify-between top-0 sticky z-30`
       )}
     >
       {/* Company Logo */}

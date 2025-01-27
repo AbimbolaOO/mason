@@ -20,31 +20,29 @@ const Projects = () => {
   // const sliderWrapper = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
-    // (context, contextSafe) => {
     () => {
-      // const next-prj-container = document.querySelector()
-      const race = document.querySelector(
+      const sliderContainer = document.querySelector(
         '.slider-container'
       ) as HTMLDivElement;
-      const raceWidth = Number(race.offsetWidth);
-      // console.log('raceWidth-->>', raceWidth);
-      const amountToScroll = raceWidth - Number(window.innerWidth);
+      const sliderWidth = sliderContainer.offsetWidth;
+      const amountToScroll = sliderWidth - window.innerWidth;
 
-      const animate = gsap.to('.slider-container', {
+      // Horizontal scroll animation
+      const horizontalScroll = gsap.to('.slider-container', {
         x: -amountToScroll,
         ease: 'none',
       });
 
+      // ScrollTrigger for horizontal scroll
       ScrollTrigger.create({
         trigger: containerRef.current,
-        start: 'top 0px',
+        start: 'top top',
         end: '+=' + amountToScroll,
-        animation: animate,
+        animation: horizontalScroll,
         // markers: true,
         pin: true,
         scrub: 1,
         invalidateOnRefresh: true,
-        // pinSpacing: false,
       });
 
       const nestSlideBtnSections = gsap.utils.toArray(
@@ -81,9 +79,9 @@ const Projects = () => {
               },
               '<'
             ),
-          onEnter: () => console.log('lol'),
+          // onEnter: () => console.log('lol'),
           // markers: true,
-          containerAnimation: animate,
+          containerAnimation: horizontalScroll,
         });
       });
     },

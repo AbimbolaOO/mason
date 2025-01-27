@@ -4,10 +4,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useRef } from 'react';
 
+import Footer from '@/components/Footer/Footer';
 import ArrowDownIcon from '@/components/Icons/ArrowDownIcon';
 import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP);
+
 const ReachOutToUs = () => {
   const container = useRef<HTMLDivElement>(null);
   const hoverContainer = useRef<HTMLDivElement>(null);
@@ -45,11 +47,16 @@ const ReachOutToUs = () => {
     { scope: container }
   );
 
+  const handleScrollBtnClick = () => {
+    console.log('LOADING...');
+  };
+
   return (
-    <div className='grid h-fit w-full *:col-start-1 *:row-start-1'>
-      {/* Foreground */}
-      <div className=' w-full relative'>
-        {/* <video
+    <div>
+      <div className='grid h-fit w-full *:col-start-1 *:row-start-1'>
+        {/* Foreground */}
+        <div className=' w-full relative'>
+          {/* <video
           className='left-0 top-0 h-full w-full object-cover'
           autoPlay
           muted
@@ -58,47 +65,56 @@ const ReachOutToUs = () => {
           <source src='/static/video/reach-out-bg.mov' type='video/mp4' />
           Your browser does not support the video tag.
         </video> */}
-        <Image
-          src='/static/gif/reach-out-bg.gif'
-          alt='background image'
-          fill
-          className='object-center'
-        />
-      </div>
+          <Image
+            src='/static/gif/reach-out-bg.gif'
+            alt='background image'
+            fill
+            className='object-center'
+          />
+        </div>
 
-      {/* Background */}
-      <div className='z-10 h-screen-minus-header bg-mason-transparency-layer'>
-        {/* main content */}
-        <div
-          ref={container}
-          className='w-full h-full grid place-content-center gap-[177px]'
-        >
-          <div className='flex justify-center items-center flex-col'>
-            <div className='text-[35px] leading-[41px] text-white'>
-              Ready to bring your projects to life?
-            </div>
-            {/* 00-----000 */}
-            <div
-              ref={hoverContainer}
-              className='font-medium font-adventPro text-[100px] leading-[150px] text-white'
-            >
-              <Link href='contact-us'>Reach Out to Us!</Link>
-              <div className='-mt-6 w-full rounded-full overflow-hidden'>
-                <div className='scaling-line h-2 w-full origin-left bg-white rounded-full invisible opacity-0'></div>
+        {/* Background */}
+        <div className='z-10 h-screen-minus-header bg-mason-transparency-layer'>
+          {/* main content */}
+          <div
+            ref={container}
+            className='w-full h-full grid place-content-center gap-[177px]'
+          >
+            <div className='flex justify-center items-center flex-col'>
+              <div className='text-[35px] leading-[41px] text-white'>
+                Ready to bring your projects to life?
+              </div>
+              {/* 00-----000 */}
+              <div
+                ref={hoverContainer}
+                className='font-medium font-adventPro text-[100px] leading-[150px] text-white'
+              >
+                <Link href='contact-us'>Reach Out to Us!</Link>
+                <div className='-mt-6 w-full rounded-full overflow-hidden'>
+                  <div className='scaling-line h-2 w-full origin-left bg-white rounded-full invisible opacity-0'></div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <button className='text-mason-black bg-white rounded-xl text-[15px] leading-[20px] p-[17px] w-fit justify-self-center flex gap-2 items-center'>
-            <div className='py-2 px-[10px]'>
-              <ArrowDownIcon />
-            </div>
-            Continue to Scroll
-            <div className='py-2 px-[10px]'>
-              <ArrowDownIcon />
-            </div>
-          </button>
+            <button
+              onClick={handleScrollBtnClick}
+              className='text-mason-black bg-white rounded-xl text-[15px] leading-[20px] p-[17px] w-fit justify-self-center flex gap-2 items-center'
+            >
+              <div className='py-2 px-[10px]'>
+                <ArrowDownIcon />
+              </div>
+              Continue to Scroll
+              <div className='py-2 px-[10px]'>
+                <ArrowDownIcon />
+              </div>
+            </button>
+          </div>
         </div>
+      </div>
+
+      {/* Footer */}
+      <div className='hidden'>
+        <Footer />
       </div>
     </div>
   );

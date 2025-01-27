@@ -3,7 +3,6 @@ import '../globals.css';
 
 import { ABeeZee, Advent_Pro } from 'next/font/google';
 
-import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 
 const aBeeZee = ABeeZee({
@@ -34,7 +33,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

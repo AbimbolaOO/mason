@@ -49,15 +49,6 @@ const ReachOutToUs = () => {
     <div className='grid h-fit w-full *:col-start-1 *:row-start-1'>
       {/* Foreground */}
       <div className=' w-full relative'>
-        {/* <video
-          className='left-0 top-0 h-full w-full object-cover'
-          autoPlay
-          muted
-          loop
-        >
-          <source src='/static/video/reach-out-bg.mov' type='video/mp4' />
-          Your browser does not support the video tag.
-        </video> */}
         <Image
           src='/static/gif/reach-out-bg.gif'
           alt='background image'
@@ -88,7 +79,6 @@ const ReachOutToUs = () => {
             <div className='text-[35px] leading-[41px] text-white'>
               Ready to bring your projects to life?
             </div>
-            {/* 00-----000 */}
             <div
               ref={hoverContainer}
               className='font-medium font-adventPro text-[100px] leading-[150px] text-white'

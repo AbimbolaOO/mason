@@ -1,11 +1,9 @@
-// import ReachOutToUs from '@/components/Cards/ReachOutToUs/ReachOutToUs';
-
 import FutureProofDigitalSolutions from './FutureProofDigitalSolutions/FutureProofDigitalSolutions';
 import GlobalOrganization from './GlobalOrganization/GlobalOrganization';
 import Hero from './Hero/Hero';
 import Industries from './Industries/Industries';
 import Projects from './Projects/Projects';
-import ReachOutToUs from './ReachOutToUs/ReachOutToUs';
+import ReachOutToUsContent from './ReachOutToUs/ReachOutToUsContent';
 
 export default function Home() {
   return (
@@ -15,7 +13,7 @@ export default function Home() {
       <FutureProofDigitalSolutions />
       <Industries />
       <Projects />
-      <ReachOutToUs />
+      <ReachOutToUsContent />
     </div>
   );
 }
