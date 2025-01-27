@@ -49,7 +49,7 @@ const Solutions = () => {
 
         <div className='z-10 flex flex-col text-white items-center justify-center'>
           <div className='text-xl leading-[23.85px]'>
-            Can't find what you're looking for?
+            Cant find what youre looking for?
           </div>
           <div className='font-medium text-[57.66px] leading-[86.49px]'>
             Reach Out to Us!
