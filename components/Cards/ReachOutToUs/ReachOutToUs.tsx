@@ -1,8 +1,9 @@
 'use client';
+import clsx from 'clsx';
 import gsap from 'gsap';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 import Footer from '@/components/Footer/Footer';
 import ArrowDownIcon from '@/components/Icons/ArrowDownIcon';
@@ -13,6 +14,7 @@ gsap.registerPlugin(useGSAP);
 const ReachOutToUs = () => {
   const container = useRef<HTMLDivElement>(null);
   const hoverContainer = useRef<HTMLDivElement>(null);
+  const [showFooter, setShowFooter] = useState(false);
 
   useGSAP(
     (_, contextSafe) => {
@@ -48,23 +50,14 @@ const ReachOutToUs = () => {
   );
 
   const handleScrollBtnClick = () => {
-    console.log('LOADING...');
+    setShowFooter(true);
   };
 
   return (
-    <div>
+    <div className='overflow-hidden'>
       <div className='grid h-fit w-full *:col-start-1 *:row-start-1'>
         {/* Foreground */}
         <div className=' w-full relative'>
-          {/* <video
-          className='left-0 top-0 h-full w-full object-cover'
-          autoPlay
-          muted
-          loop
-        >
-          <source src='/static/video/reach-out-bg.mov' type='video/mp4' />
-          Your browser does not support the video tag.
-        </video> */}
           <Image
             src='/static/gif/reach-out-bg.gif'
             alt='background image'
@@ -96,6 +89,7 @@ const ReachOutToUs = () => {
               </div>
             </div>
 
+            {/* <Link href={'#footer'}> */}
             <button
               onClick={handleScrollBtnClick}
               className='text-mason-black bg-white rounded-xl text-[15px] leading-[20px] p-[17px] w-fit justify-self-center flex gap-2 items-center'
@@ -108,13 +102,19 @@ const ReachOutToUs = () => {
                 <ArrowDownIcon />
               </div>
             </button>
+            {/* </Link> */}
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <div className='hidden'>
-        <Footer />
+      <div
+        className={clsx(
+          'fixed z-50 transition-all duration-300',
+          showFooter ? 'top-[calc(0%)]' : 'top-[100%]'
+        )}
+      >
+        <Footer toggleFooterFn={() => setShowFooter(false)} />
       </div>
     </div>
   );

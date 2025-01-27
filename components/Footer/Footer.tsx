@@ -45,10 +45,14 @@ const footerNav: IFooterNav[] = [
   },
 ];
 
-export default function Footer() {
+interface FooterProps {
+  toggleFooterFn: () => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ toggleFooterFn }) => {
   return (
     <footer className='footer bg-white h-[100vh] flex pb-10 top-0 sticky flex-col justify-between z-40'>
-      <Header footer />
+      <Header footer toggleFooterFn={toggleFooterFn} />
       <div className='flex flex-col gap-[148.7px] px-20'>
         <div className='grid grid-cols-[59%_41%]'>
           {/* Nav Area */}
@@ -77,7 +81,9 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
 
 interface FooterNavColProps {
   title: string;

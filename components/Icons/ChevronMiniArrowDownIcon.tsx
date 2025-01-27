@@ -9,20 +9,10 @@ const ChevronMiniArrowDownIcon = () => {
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <mask
-        id='mask0_1026_8101'
-        maskUnits='userSpaceOnUse'
-        x='0'
-        y='0'
-        width='10'
-        height='11'
-      >
-        <path d='M10 0.75H0V10.75H10V0.75Z' fill='white' />
-      </mask>
-      <g mask='url(#mask0_1026_8101)'>
+      <g>
         <path
           d='M8.125 4.5L5 7.625L1.875 4.5'
-          stroke='white'
+          stroke='currentColor'
           strokeWidth='1.6'
           strokeLinecap='round'
           strokeLinejoin='round'

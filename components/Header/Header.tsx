@@ -11,9 +11,13 @@ import SolutionsDropdown from './Solutions';
 
 interface HeaderProps {
   footer?: boolean;
+  toggleFooterFn?: () => void;
 }
 
-export default function Header({ footer = false }: HeaderProps) {
+export default function Header({
+  toggleFooterFn,
+  footer = false,
+}: HeaderProps) {
   const pathname = usePathname();
 
   return (
@@ -25,7 +29,13 @@ export default function Header({ footer = false }: HeaderProps) {
     >
       {/* Company Logo */}
       <Link href='/' className='flex items-center'>
-        {!footer ? <CompanyLogo /> : <CompanyBlackLogo />}
+        {!footer ? (
+          <CompanyLogo />
+        ) : (
+          <div onClick={() => toggleFooterFn && toggleFooterFn()}>
+            <CompanyBlackLogo />
+          </div>
+        )}
       </Link>
 
       {/* Nav */}

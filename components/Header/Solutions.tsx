@@ -36,6 +36,7 @@ const Solutions = () => {
             src='/static/img/solution-bg-left.png'
             alt='background image'
             fill
+            priority
             className='object-left-bottom object-contain'
           />
 
@@ -43,6 +44,9 @@ const Solutions = () => {
             src='/static/img/solution-bg-right.png'
             alt='background image'
             fill
+            // priority
+            // width={200}
+            // height={400}
             className='object-right-bottom object-contain'
           />
         </div>
