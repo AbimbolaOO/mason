@@ -33,6 +33,7 @@ export default {
       colors: {
         "mason-transparency-layer": "rgba(0, 0, 0, 0.65)",
         "mason-black": '#0F0F0F',
+        "mason-purple": 'rgba(127, 92, 226, 0.8)',
         "mason-grey": "#6C6D71",
         "mason-grey-light": "rgba(108, 109, 113, 0.3)",
         "mason-placeholder": 'rgba(15, 15, 15, 0.2)',
