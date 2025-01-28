@@ -1,5 +1,6 @@
 import React from 'react';
 
+import ContactForm from './ContactForm/ContactForm';
 import Hero from './Hero/Hero';
 import MasonAdvantage from './MasonAdvantage/MasonAdvantage';
 import OurDesignProcess from './OurDesignProcess/OurDesignProcess';
@@ -12,6 +13,7 @@ export default function page() {
       <OurDesignProcess />
       <MasonAdvantage />
       <WeCreateSystems />
+      <ContactForm />
     </div>
   );
 }

@@ -37,6 +37,7 @@ export default {
         "mason-grey": "#6C6D71",
         "mason-grey-light": "rgba(108, 109, 113, 0.3)",
         "mason-placeholder": 'rgba(15, 15, 15, 0.2)',
+        "mason-form-placeholder": 'rgba(255, 255, 255, 0.2)',
         "mason-border-grey": "rgba(15, 15, 15, 0.05)",
         "mason-border": "#EAEAEA",
         "mason-error": "rgba(216, 35, 29, 1)",
