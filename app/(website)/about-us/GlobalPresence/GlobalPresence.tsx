@@ -7,7 +7,7 @@ const GlobalPresence = () => {
   return (
     <div>
       {/* Globe section */}
-      <div className='grid pl-20 py-[175px] pr-[120px] bg-green-800 grid-cols-2 gap-[82px]'>
+      <div className='grid pl-20 py-[175px] pr-[120px] bg-white grid-cols-2 gap-[82px]'>
         <div className='text-6xl leading-[100px] font-adventPro self-center font-semibold'>
           We are creating global products that solve complex problems
         </div>

@@ -22,7 +22,9 @@ const InfiniteScroller: React.FC<InfiniteScrollerProps> = ({
           reverse ? 'animate-scrollReverse' : 'animate-scroll'
         )}
       >
-        {iconData?.map(({ icon, key }: InfiniteScrollerIconData) => icon)}
+        {iconData?.map(({ icon, key }: InfiniteScrollerIconData) => (
+          <div key={key}>{icon}</div>
+        ))}
       </div>
       <div
         className={clsx(
@@ -30,7 +32,9 @@ const InfiniteScroller: React.FC<InfiniteScrollerProps> = ({
           reverse ? 'animate-scrollReverse' : 'animate-scroll'
         )}
       >
-        {iconData?.map(({ icon, key }: InfiniteScrollerIconData) => icon)}
+        {iconData?.map(({ icon, key }: InfiniteScrollerIconData) => (
+          <div key={key}>{icon}</div>
+        ))}
       </div>
     </div>
   );
