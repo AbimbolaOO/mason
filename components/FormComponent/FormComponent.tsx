@@ -5,8 +5,8 @@ interface IFormComponent {
   initialValues: any;
   schema: any;
   onSubmit: any;
-  children: any;
-  className?: any;
+  children: React.ReactNode;
+  className?: string;
   autoComplete?: string;
 }
 
