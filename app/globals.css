@@ -19,3 +19,11 @@ body {
   /* background: var(--background); */
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.chatLeftMsg::before {
+  content: url('/static/svg/chatLeftTail.svg');
+  display: block;
+  position: absolute;
+  bottom: -20%;
+  left: -4px;
+}

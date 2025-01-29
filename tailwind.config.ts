@@ -32,6 +32,7 @@ export default {
 
       colors: {
         "mason-transparency-layer": "rgba(0, 0, 0, 0.65)",
+        "mason-clear": "rgba(255, 255, 255, 0.1)",
         "mason-black": '#0F0F0F',
         "mason-purple": 'rgba(127, 92, 226, 0.8)',
         "mason-grey": "#6C6D71",
@@ -48,7 +49,12 @@ export default {
         "mason-border-transparent": "rgba(217, 217, 217, 0.5)",
         "mason-badge-bg": "rgba(0, 183, 63, 0.1)",
         "mason-badge-txt": "#00B73F",
+
       },
+
+      backgroundImage: {
+        "mason-linear-stroke": "linear-gradient(89.21deg, rgba(255, 255, 255, 0.1) 0%, rgba(102, 102, 102, 0.8) 99.92%)"
+      }
     },
   },
   plugins: [],

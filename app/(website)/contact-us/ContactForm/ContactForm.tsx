@@ -2,13 +2,19 @@
 import React from 'react';
 
 import { FormComponent } from '@/components/FormComponent/FormComponent';
-import { TextInputField } from '@/components/FormComponent/FormField';
-import EnterIcon from '@/components/Icons/EnterIcon';
+import {
+  CenterTextInputField,
+  TextInputField,
+} from '@/components/FormComponent/FormField';
+import SubmitButton from '@/components/FormComponent/SubmitButton';
+import MasonIcon from '@/components/Icons/MasonIcon';
 import {
   ContactEmailDataType,
   ContactEmailInitialValues,
   ContactEmailSchema,
 } from '@/models/contact-email.model';
+
+import ContactEmail from './ContactEmail';
 
 const ContactForm = () => {
   const onSubmitEmail = (value: ContactEmailDataType) => {
@@ -16,36 +22,47 @@ const ContactForm = () => {
   };
 
   return (
-    <div className='h-[calc(100vh-89px)] bg-mason-black grid place-content-center border border-red-500'>
+    // <ContactEmail />
+    <div className='h-[calc(100vh-89px)] bg-mason-black grid items-center px-[120px] border border-red-500'>
       <FormComponent
         initialValues={ContactEmailInitialValues}
         schema={ContactEmailSchema}
         onSubmit={onSubmitEmail}
       >
-        <div className='flex gap-12 flex-col border border-red-300'>
-          <div className='flex gap-6 flex-col'>
-            <div className='text-[25px] leading-[29.55px] text-white'>
-              Get started with your email
+        <div className='grid grid-cols-2 items-center'>
+          <div className='flex gap-12 flex-col border border-red-600 items-start'>
+            <div className='flex gap-6 flex-col'>
+              <div className='text-[25px] leading-[29.55px] text-white'>
+                Get started with your email
+              </div>
+              <TextInputField
+                name='email'
+                id='text'
+                placeholder='type here'
+                type='text'
+              />
             </div>
-            <TextInputField
-              name='email'
-              id='email'
-              placeholder='type here'
-              type='text'
-            />
+
+            <SubmitButton />
           </div>
-          {/* submit button */}
-          <div className='border flex items-center gap-6'>
-            <button
-              type='submit'
-              className='bg-white rounded-[12px] text-[15px] leading-[20px] py-3 px-[52px]'
-            >
-              Next
-            </button>
-            <div className='flex gap-4'>
-              <div className='text-white text-[15px]'>Or</div>
-              <EnterIcon />
-              <div className='text-white text-[15px]'>Press Enter</div>
+
+          <div className='ml-auto'>
+            <div className='bg-mason-clear w-[327px] p-4 rounded-[24px]'>
+              <div className='rounded-[20px] p-[1px] bg-mason-linear-stroke'>
+                <div className='rounded-[20px] px-5 py-[25px] bg-[#3D3D3D] text-white flex-col flex gap-4'>
+                  <div className='flex items-center gap-2'>
+                    <div>
+                      <div className='w-10 h-10 rounded-full grid place-content-center'>
+                        <MasonIcon />
+                      </div>
+                    </div>
+                    <div className='text-[14px] leading-[25px] flex py-2 px-[11px] rounded-[15px] relative chatLeftMsg bg-[#4A4A4A]'>
+                      Your full name?
+                    </div>
+                  </div>
+                  <div className='border'>John Doe</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
