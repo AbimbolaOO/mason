@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import { useField } from 'formik';
-import { useState } from 'react';
 
 export interface InputFieldProps {
   id?: string;

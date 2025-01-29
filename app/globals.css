@@ -27,3 +27,11 @@ body {
   bottom: -20%;
   left: -4px;
 }
+
+.chatRightMsg::before {
+  content: url('/static/svg/chatRightTail.svg');
+  display: block;
+  position: absolute;
+  bottom: -20%;
+  right: -4px;
+}
