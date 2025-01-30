@@ -2,8 +2,7 @@
 import React from 'react';
 
 import { FormComponent } from '@/components/FormComponent/FormComponent';
-import { PhoneNumberInputField } from '@/components/FormComponent/PhoneNumberInputField';
-// import { PhoneNumberInputField } from '@/components/FormComponent/PhoneNumberInputField';
+import { TextInputField } from '@/components/FormComponent/FormField';
 import SubmitButton from '@/components/FormComponent/SubmitButton';
 import ChevronArrowLeftIcon from '@/components/Icons/ChevronArrowLeftIcon';
 import MasonIcon from '@/components/Icons/MasonIcon';
@@ -13,20 +12,19 @@ import {
   ContactEmailSchema,
 } from '@/models/contact-email.model';
 
-const ContactForm = () => {
+const ContactFullname = () => {
   const onSubmitEmail = (value: ContactEmailDataType) => {
     alert(JSON.stringify(value));
   };
 
   return (
-    // <ContactFullname />
     <div className='h-[calc(100vh-89px)] bg-mason-black grid items-center px-[120px]'>
       <FormComponent
         initialValues={ContactEmailInitialValues}
         schema={ContactEmailSchema}
         onSubmit={onSubmitEmail}
       >
-        <div className='grid grid-cols-2 items-center border border-red-400'>
+        <div className='grid grid-cols-2 items-center'>
           <div className='flex gap-12 flex-col items-start'>
             <div className='flex flex-col gap-6'>
               <div className='text-white text-[16px] leading-[18.91px] flex gap-1 cursor-pointer w-fit items-center'>
@@ -34,9 +32,9 @@ const ContactForm = () => {
               </div>
               <div className='flex gap-6 flex-col'>
                 <div className='text-[25px] leading-[29.55px] text-white'>
-                  Your Phone Number
+                  Your Full Name
                 </div>
-                <PhoneNumberInputField
+                <TextInputField
                   name='email'
                   id='text'
                   placeholder='type here'
@@ -84,4 +82,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ContactFullname;
