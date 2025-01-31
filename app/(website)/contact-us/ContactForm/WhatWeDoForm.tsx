@@ -2,7 +2,10 @@
 import React from 'react';
 
 import { BackButtons, DotIconBtn } from '@/components/Buttons/Buttons';
-import { CustomRadio, CustomRadioGroup } from '@/components/FormComponent/CustomRadioButton';
+import {
+  CustomRadio,
+  CustomRadioGroup,
+} from '@/components/FormComponent/CustomRadioButton';
 import { FormComponent } from '@/components/FormComponent/FormComponent';
 import SubmitButton from '@/components/FormComponent/SubmitButton';
 import {
@@ -37,7 +40,11 @@ const WhatWeDoForm = () => {
         <div className='grid grid-cols-2 items-center'>
           <div className='flex gap-12 flex-col items-start'>
             <div className='flex flex-col gap-6'>
-              <BackButtons />
+              <BackButtons
+                backFn={() => {
+                  dispatch(contactActions.setSlideIndex(-1));
+                }}
+              />
               <div className='flex gap-6 flex-col'>
                 <div className='text-[25px] leading-[29.55px] text-white'>
                   What will you like to do?

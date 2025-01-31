@@ -23,13 +23,16 @@ export const DotIconBtn: React.FC<DotIconBtnProps> = ({
   );
 };
 
-// interface BackButtonsProps {
+interface BackButtonsProps {
+  backFn: (...args: any) => void;
+}
 
-// }
-
-export const BackButtons = () => {
+export const BackButtons: React.FC<BackButtonsProps> = ({ backFn }) => {
   return (
-    <div className='text-white text-[16px] leading-[18.91px] flex gap-1 cursor-pointer w-fit items-center'>
+    <div
+      onClick={() => backFn()}
+      className='text-white text-[16px] leading-[18.91px] flex gap-1 cursor-pointer w-fit items-center'
+    >
       <ChevronArrowLeftIcon /> <div>Back</div>
     </div>
   );

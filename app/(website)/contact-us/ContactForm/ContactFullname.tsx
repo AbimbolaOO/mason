@@ -20,6 +20,7 @@ const ContactFullname = () => {
   const onSubmitName = (value: ContactNameDataType) => {
     dispatch(contactActions.setFullNameSlide(value));
     dispatch(contactActions.setSlideIndex(1));
+    dispatch(contactActions.setVerticalSlideIndex(1));
   };
 
   return (
@@ -32,7 +33,11 @@ const ContactFullname = () => {
         <div className='grid grid-cols-2 items-center'>
           <div className='flex gap-12 flex-col items-start'>
             <div className='flex flex-col gap-6'>
-              <BackButtons />
+              <BackButtons
+                backFn={() => {
+                  dispatch(contactActions.setSlideIndex(-1));
+                }}
+              />
               <div className='flex gap-6 flex-col'>
                 <div className='text-[25px] leading-[29.55px] text-white'>
                   Your Full Name
