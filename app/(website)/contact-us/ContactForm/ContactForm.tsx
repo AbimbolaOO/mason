@@ -2,16 +2,14 @@
 import React from 'react';
 
 import ContactEmail from './ContactEmail';
-import ContactFullname from './ContactFullname';
-import ContactPhoneNumber from './ContactPhoneNumber';
+import VerticalSlideContactView from './VerticalSlideContactView';
 import WhatWeDoForm from './WhatWeDoForm';
 
 const ContactForm = () => {
   return (
     <div>
       <ContactEmail />
-      <ContactFullname />
-      <ContactPhoneNumber />
+      <VerticalSlideContactView />
       <WhatWeDoForm />
     </div>
   );

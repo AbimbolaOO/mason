@@ -9,7 +9,7 @@ const SubmitButton = () => {
     <div className='flex items-center gap-6'>
       <button
         type='submit'
-        className='bg-white rounded-[12px] text-[15px] leading-[20px] py-3 px-[52px] disabled:bg-mason-lighter-border-grey disabled:cursor-not-allowed'
+        className='text-mason-black bg-white rounded-[12px] text-[15px] leading-[20px] py-3 px-[52px] disabled:bg-mason-lighter-border-grey disabled:cursor-not-allowed'
         disabled={isValid && dirty ? false : true}
       >
         Next

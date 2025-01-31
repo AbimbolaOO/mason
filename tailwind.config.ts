@@ -52,8 +52,7 @@ export default {
         "mason-border-transparent": "rgba(217, 217, 217, 0.5)",
         "mason-badge-bg": "rgba(0, 183, 63, 0.1)",
         "mason-badge-txt": "#00B73F",
-
-
+        "mason-message-black": "rgba(15, 15, 15, 0.3)",
       },
 
       backgroundImage: {

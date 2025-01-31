@@ -35,3 +35,11 @@ body {
   bottom: -20%;
   right: -4px;
 }
+
+.chatRightMsgDark::before {
+  content: url('/static/svg/chatRightTailDark.svg');
+  display: block;
+  position: absolute;
+  bottom: -20%;
+  right: -4px;
+}
