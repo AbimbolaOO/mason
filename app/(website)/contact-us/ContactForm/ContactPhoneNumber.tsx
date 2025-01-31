@@ -2,29 +2,30 @@
 import React from 'react';
 
 import { FormComponent } from '@/components/FormComponent/FormComponent';
-import { TextInputField } from '@/components/FormComponent/FormField';
+import { PhoneNumberInputField } from '@/components/FormComponent/PhoneNumberInputField';
+// import { PhoneNumberInputField } from '@/components/FormComponent/PhoneNumberInputField';
 import SubmitButton from '@/components/FormComponent/SubmitButton';
 import ChevronArrowLeftIcon from '@/components/Icons/ChevronArrowLeftIcon';
 import MasonIcon from '@/components/Icons/MasonIcon';
 import {
-  ContactNameDataType,
-  ContactNameInitialValues,
-  ContactNameSchema,
-} from '@/models/contact-name.model';
+  ContactPhoneDataType,
+  ContactPhoneInitialValues,
+  ContactPhoneSchema,
+} from '@/models/contact-phone.model';
 
-const ContactFullname = () => {
-  const onSubmitName = (value: ContactNameDataType) => {
+const ContactPhoneNumber = () => {
+  const onSubmitPhone = (value: ContactPhoneDataType) => {
     alert(JSON.stringify(value));
   };
 
   return (
     <div className='h-[calc(100vh-89px)] bg-mason-black grid items-center px-[120px]'>
       <FormComponent
-        initialValues={ContactNameInitialValues}
-        schema={ContactNameSchema}
-        onSubmit={onSubmitName}
+        initialValues={ContactPhoneInitialValues}
+        schema={ContactPhoneSchema}
+        onSubmit={onSubmitPhone}
       >
-        <div className='grid grid-cols-2 items-center'>
+        <div className='grid grid-cols-2 items-center border border-red-400'>
           <div className='flex gap-12 flex-col items-start'>
             <div className='flex flex-col gap-6'>
               <div className='text-white text-[16px] leading-[18.91px] flex gap-1 cursor-pointer w-fit items-center'>
@@ -32,11 +33,11 @@ const ContactFullname = () => {
               </div>
               <div className='flex gap-6 flex-col'>
                 <div className='text-[25px] leading-[29.55px] text-white'>
-                  Your Full Name
+                  Your Phone Number
                 </div>
-                <TextInputField
-                  name='fullName'
-                  id='fullName'
+                <PhoneNumberInputField
+                  name='phone'
+                  id='phone'
                   placeholder='type here'
                   type='text'
                 />
@@ -82,4 +83,4 @@ const ContactFullname = () => {
   );
 };
 
-export default ContactFullname;
+export default ContactPhoneNumber;

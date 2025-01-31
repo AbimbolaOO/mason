@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${aBeeZee.className} ${adventPro.variable} antialiased flex flex-col scroll-smooth`}
+        className={`${aBeeZee.className} ${adventPro.variable} antialiased flex flex-col scroll-smooth overscroll-none`}
       >
         <Header />
         {children}

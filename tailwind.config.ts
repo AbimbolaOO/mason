@@ -36,6 +36,8 @@ export default {
         "mason-black": '#0F0F0F',
         "mason-purple": 'rgba(127, 92, 226, 0.8)',
         "mason-grey": "#6C6D71",
+        "mason-lighter-border-grey": "rgba(255, 255, 255, 0.5)",
+        "mason-light-border-grey": "rgba(255, 255, 255, 0.4)",
         "mason-grey-light": "rgba(108, 109, 113, 0.3)",
         "mason-placeholder": 'rgba(15, 15, 15, 0.2)',
         "mason-form-placeholder": 'rgba(255, 255, 255, 0.2)',
@@ -44,16 +46,18 @@ export default {
         "mason-error": "rgba(216, 35, 29, 1)",
         "mason-tert-text": "#6C6D71",
         "mason-red": "#D8231D",
+        "mason-light-red": "rgba(216, 35, 29, 0.2)",
         "mason-stroke": "292D32",
         "mason-icon-bg": "rgba(216, 35, 29, 0.1)",
         "mason-border-transparent": "rgba(217, 217, 217, 0.5)",
         "mason-badge-bg": "rgba(0, 183, 63, 0.1)",
         "mason-badge-txt": "#00B73F",
 
+
       },
 
       backgroundImage: {
-        "mason-linear-stroke": "linear-gradient(89.21deg, rgba(255, 255, 255, 0.1) 0%, rgba(102, 102, 102, 0.8) 99.92%)"
+        "mason-linear-stroke": "linear-gradient(89.21deg, rgba(255, 255, 255, 0.1) 0%, rgba(102, 102, 102, 0.8) 99.92%)",
       }
     },
   },

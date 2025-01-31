@@ -17,7 +17,7 @@ const PhoneNumberInputField: React.FC<PhoneNumberInputFieldProps> = ({
   ...props
 }) => {
   // console.log('libphonenumber--->>', libphonenumber);
-  const [field, meta] = useField(props);
+  const [field, meta, helper] = useField(props);
   const [inputValue, setInputValue] = useState('');
   const [selectedCountry, setSelectedCountry] = useState(getNigeriaData);
 
@@ -39,7 +39,10 @@ const PhoneNumberInputField: React.FC<PhoneNumberInputFieldProps> = ({
     for (const digit of value) {
       formattedNumber = formatter.inputDigit(digit);
     }
+    // !
+    helper.setValue(value);
     setInputValue(formattedNumber);
+
     console.log('formattedNumber', formattedNumber);
   };
 

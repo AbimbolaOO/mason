@@ -2,12 +2,11 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
-import Link from 'next/link';
 import React, { useRef } from 'react';
 
+import { DotIconBtn } from '@/components/Buttons/Buttons';
 import TitleCard from '@/components/Cards/TitleCard/TitleCard';
 import ArrowRightIcon from '@/components/Icons/ArrowRightIcon';
-import DotIcon from '@/components/Icons/DotIcon';
 import { useGSAP } from '@gsap/react';
 
 import { ProjectData } from './ProjectData';
@@ -173,7 +172,12 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
           </div>
 
           {/* Button Area */}
-          <LaunchProjectBtn linkToProject={linkToProject} />
+          {/* <LaunchProjectBtn linkToProject={linkToProject} /> */}
+          <DotIconBtn
+            label='Launch Project'
+            href={linkToProject}
+            target='_blank'
+          />
         </div>
       </div>
 
@@ -198,7 +202,12 @@ const NextProjectSlide = ({ linkToProject }: { linkToProject: string }) => {
   return (
     <div className='next-prj-container w-fit self-center justify-self-center'>
       <div className='next-prj-slide flex gap-[49px] justify-center w-fit invisible opacity-0'>
-        <LaunchProjectBtn linkToProject={linkToProject} />
+        {/* <LaunchProjectBtn linkToProject={linkToProject} /> */}
+        <DotIconBtn
+          label='Launch Project'
+          href={linkToProject}
+          target='_blank'
+        />
         <div className='flex flex-col'>
           <div className='text-[15px] leading-[20px] text-mason-grey'>
             Keep Scrolling to
@@ -211,15 +220,5 @@ const NextProjectSlide = ({ linkToProject }: { linkToProject: string }) => {
         </div>
       </div>
     </div>
-  );
-};
-
-const LaunchProjectBtn = ({ linkToProject }: { linkToProject: string }) => {
-  return (
-    <Link href={linkToProject} target='_blank' className='launchBtn'>
-      <button className='bg-white rounded-xl text-[15px] leading-[20px] flex gap-2 text-mason-black w-fit py-3 px-4 items-center'>
-        Launch Project <DotIcon />
-      </button>
-    </Link>
   );
 };

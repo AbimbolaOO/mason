@@ -2,11 +2,7 @@ import React, { useMemo, useRef, useState } from 'react';
 
 import ChevronArrowDownIcon from '@/components/Icons/ChevronArrowDownIcon';
 import useOutsideClick from '@/hooks/ui-control/useOutsideClick';
-import {
-  CountryPhoneInterface,
-  countryPhoneObj,
-  getNigeriaData,
-} from '@/utils/phoneNumberUtils';
+import { CountryPhoneInterface, countryPhoneObj, getNigeriaData } from '@/utils/phoneNumberUtils';
 
 interface CountrySelectDropDownProps {
   setSelectedCountryFn: (...args: any) => void;
