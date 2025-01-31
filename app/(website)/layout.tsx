@@ -5,6 +5,8 @@ import { ABeeZee, Advent_Pro } from 'next/font/google';
 
 import Header from '@/components/Header/Header';
 
+import StoreProvider from './StoreProvider.tsx';
+
 const aBeeZee = ABeeZee({
   variable: '--aBeeZee',
   subsets: ['latin'],
@@ -31,9 +33,11 @@ export default function RootLayout({
       <body
         className={`${aBeeZee.className} ${adventPro.variable} antialiased flex flex-col scroll-smooth overscroll-none`}
       >
-        <Header />
-        {children}
-        {/* <Footer /> */}
+        <StoreProvider>
+          <Header />
+          {children}
+          {/* <Footer /> */}
+        </StoreProvider>
       </body>
     </html>
   );

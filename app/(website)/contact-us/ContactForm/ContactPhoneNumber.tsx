@@ -1,21 +1,25 @@
 'use client';
 import React from 'react';
 
+import { BackButtons } from '@/components/Buttons/Buttons';
 import { FormComponent } from '@/components/FormComponent/FormComponent';
 import { PhoneNumberInputField } from '@/components/FormComponent/PhoneNumberInputField';
-// import { PhoneNumberInputField } from '@/components/FormComponent/PhoneNumberInputField';
 import SubmitButton from '@/components/FormComponent/SubmitButton';
-import ChevronArrowLeftIcon from '@/components/Icons/ChevronArrowLeftIcon';
 import MasonIcon from '@/components/Icons/MasonIcon';
 import {
   ContactPhoneDataType,
   ContactPhoneInitialValues,
   ContactPhoneSchema,
 } from '@/models/contact-phone.model';
+import { contactActions } from '@/redux/slices/contactSlice';
+import { useAppDisPatch } from '@/redux/store';
 
 const ContactPhoneNumber = () => {
+  const dispatch = useAppDisPatch();
+
   const onSubmitPhone = (value: ContactPhoneDataType) => {
-    alert(JSON.stringify(value));
+    dispatch(contactActions.setPhoneSlide(value));
+    dispatch(contactActions.setSlideIndex(1));
   };
 
   return (
@@ -28,9 +32,7 @@ const ContactPhoneNumber = () => {
         <div className='grid grid-cols-2 items-center border border-red-400'>
           <div className='flex gap-12 flex-col items-start'>
             <div className='flex flex-col gap-6'>
-              <div className='text-white text-[16px] leading-[18.91px] flex gap-1 cursor-pointer w-fit items-center'>
-                <ChevronArrowLeftIcon /> <div>Back</div>
-              </div>
+              <BackButtons />
               <div className='flex gap-6 flex-col'>
                 <div className='text-[25px] leading-[29.55px] text-white'>
                   Your Phone Number

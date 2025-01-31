@@ -9,10 +9,16 @@ import {
   ContactEmailInitialValues,
   ContactEmailSchema,
 } from '@/models/contact-email.model';
+import { contactActions } from '@/redux/slices/contactSlice';
+import { useAppDisPatch } from '@/redux/store';
 
 const ContactEmail = () => {
+  // const contactData = useAppSelector((state) => state.contactData);
+  const dispatch = useAppDisPatch();
+
   const onSubmitEmail = (value: ContactEmailDataType) => {
-    alert(JSON.stringify(value));
+    dispatch(contactActions.setEmailSlide(value));
+    dispatch(contactActions.setSlideIndex(1));
   };
 
   return (

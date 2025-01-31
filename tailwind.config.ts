@@ -58,6 +58,7 @@ export default {
 
       backgroundImage: {
         "mason-linear-stroke": "linear-gradient(89.21deg, rgba(255, 255, 255, 0.1) 0%, rgba(102, 102, 102, 0.8) 99.92%)",
+        "tx-gradient": "linear-gradient(90deg, #C8C8C8 4.29%, #878787 97.5%)"
       }
     },
   },

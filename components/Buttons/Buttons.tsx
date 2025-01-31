@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import ChevronArrowLeftIcon from '../Icons/ChevronArrowLeftIcon';
 import DotIcon from '../Icons/DotIcon';
 
 interface DotIconBtnProps {
@@ -19,5 +20,17 @@ export const DotIconBtn: React.FC<DotIconBtnProps> = ({
         {label} <DotIcon />
       </button>
     </Link>
+  );
+};
+
+// interface BackButtonsProps {
+
+// }
+
+export const BackButtons = () => {
+  return (
+    <div className='text-white text-[16px] leading-[18.91px] flex gap-1 cursor-pointer w-fit items-center'>
+      <ChevronArrowLeftIcon /> <div>Back</div>
+    </div>
   );
 };

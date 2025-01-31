@@ -49,8 +49,8 @@ export const CustomRadio: React.FC<CustomRadioProps> = ({
       <div className='bg-mason-black rounded-[24px]'>
         <label className='grid *:col-start-1 *:row-start-1'>
           <input type='radio' {...field} {...props} className='peer hidden' />
-          <div className='rounded-[24px] *:cursor-pointer text-[25px] leading-[45px] cursor-pointer text-mason-light-border-grey p-4 peer-checked:bg-mason-light-red'>
-            {children}
+          <div className='rounded-[24px] *:cursor-pointer text-[25px] leading-[45px] cursor-pointer text-mason-light-border-grey p-4 peer-checked:bg-mason-light-red peer-checked:*:bg-tx-gradient peer-checked:*:bg-clip-text'>
+            <span>{children}</span>
           </div>
         </label>
       </div>

@@ -1,20 +1,25 @@
 'use client';
 import React from 'react';
 
+import { BackButtons } from '@/components/Buttons/Buttons';
 import { FormComponent } from '@/components/FormComponent/FormComponent';
 import { TextInputField } from '@/components/FormComponent/FormField';
 import SubmitButton from '@/components/FormComponent/SubmitButton';
-import ChevronArrowLeftIcon from '@/components/Icons/ChevronArrowLeftIcon';
 import MasonIcon from '@/components/Icons/MasonIcon';
 import {
   ContactNameDataType,
   ContactNameInitialValues,
   ContactNameSchema,
 } from '@/models/contact-name.model';
+import { contactActions } from '@/redux/slices/contactSlice';
+import { useAppDisPatch } from '@/redux/store';
 
 const ContactFullname = () => {
+  const dispatch = useAppDisPatch();
+
   const onSubmitName = (value: ContactNameDataType) => {
-    alert(JSON.stringify(value));
+    dispatch(contactActions.setFullNameSlide(value));
+    dispatch(contactActions.setSlideIndex(1));
   };
 
   return (
@@ -27,9 +32,7 @@ const ContactFullname = () => {
         <div className='grid grid-cols-2 items-center'>
           <div className='flex gap-12 flex-col items-start'>
             <div className='flex flex-col gap-6'>
-              <div className='text-white text-[16px] leading-[18.91px] flex gap-1 cursor-pointer w-fit items-center'>
-                <ChevronArrowLeftIcon /> <div>Back</div>
-              </div>
+              <BackButtons />
               <div className='flex gap-6 flex-col'>
                 <div className='text-[25px] leading-[29.55px] text-white'>
                   Your Full Name
