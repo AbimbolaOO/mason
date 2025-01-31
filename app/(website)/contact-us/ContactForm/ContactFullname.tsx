@@ -44,6 +44,9 @@ const ContactFullname = () => {
               id='fullName'
               placeholder='type here'
               type='text'
+              interactionFn={(value) => {
+                dispatch(contactActions.setFullNameSlide({ fullName: value }));
+              }}
             />
           </div>
         </div>

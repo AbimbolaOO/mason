@@ -44,6 +44,9 @@ const ContactPhoneNumber = () => {
               id='phone'
               placeholder='type here'
               type='text'
+              interactionFn={(value) => {
+                dispatch(contactActions.setPhoneSlide({ phone: value }));
+              }}
             />
           </div>
         </div>

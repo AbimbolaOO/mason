@@ -9,13 +9,14 @@ const ContactChatView = () => {
   const {
     contactNameSlide: { fullName },
     contactPhoneSlide: { phone },
+    slideIndex,
   } = useAppSelector((state) => state.contactData);
 
   return (
     <div className='ml-auto'>
       <div className='bg-mason-clear w-[327px] p-4 rounded-[24px] text-white flex flex-col gap-[19px]'>
         {/* Number View */}
-        {fullName && (
+        {fullName && slideIndex >= 2 && (
           <div className='flex flex-col items-center'>
             <div className='rounded-full text-[30px] leading-[25px] bg-mason-clear w-[50px] h-[50px] grid place-content-center'>
               {fullName.slice(0, 1).toLocaleUpperCase()}

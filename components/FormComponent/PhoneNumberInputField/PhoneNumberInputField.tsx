@@ -11,9 +11,11 @@ export interface PhoneNumberInputFieldProps {
   name: string;
   type: string;
   placeholder?: string;
+  interactionFn?: (...args: any) => void;
 }
 
 const PhoneNumberInputField: React.FC<PhoneNumberInputFieldProps> = ({
+  interactionFn,
   ...props
 }) => {
   // console.log('libphonenumber--->>', libphonenumber);
@@ -42,6 +44,10 @@ const PhoneNumberInputField: React.FC<PhoneNumberInputFieldProps> = ({
     // !
     helper.setValue(value);
     setInputValue(formattedNumber);
+
+    if (interactionFn) {
+      interactionFn(value);
+    }
 
     console.log('formattedNumber', formattedNumber);
   };
