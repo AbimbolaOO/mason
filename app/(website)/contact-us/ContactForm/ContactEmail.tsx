@@ -22,7 +22,7 @@ const ContactEmail = () => {
   };
 
   return (
-    <div className='h-[calc(100vh-89px)] bg-mason-black grid place-content-center border border-red-500'>
+    <div className='h-[calc(100vh-89px)] grid place-content-center border border-red-500'>
       <FormComponent
         initialValues={ContactEmailInitialValues}
         schema={ContactEmailSchema}

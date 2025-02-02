@@ -2,7 +2,10 @@
 import React from 'react';
 
 import { BackButtons, DotIconBtn } from '@/components/Buttons/Buttons';
-import { CustomRadio, CustomRadioGroup } from '@/components/FormComponent/CustomRadioButton';
+import {
+  CustomRadio,
+  CustomRadioGroup,
+} from '@/components/FormComponent/CustomRadioButton';
 import { FormComponent } from '@/components/FormComponent/FormComponent';
 import SubmitButton from '@/components/FormComponent/SubmitButton';
 import {
@@ -28,7 +31,7 @@ const WhatWeDoForm = () => {
   };
 
   return (
-    <div className='h-fit pt-[13px] pb-[100px] bg-mason-black grid items-center px-[120px]'>
+    <div className='h-fit pt-[13px] pb-[100px] grid items-center px-[120px]'>
       <FormComponent
         initialValues={ContactOptionsInitialValues}
         schema={ContactOptionsSchema}
