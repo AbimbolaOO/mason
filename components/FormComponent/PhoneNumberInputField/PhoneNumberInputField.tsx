@@ -11,11 +11,13 @@ export interface PhoneNumberInputFieldProps {
   name: string;
   type: string;
   placeholder?: string;
+  autoFocus?: boolean;
   interactionFn?: (...args: any) => void;
 }
 
 const PhoneNumberInputField: React.FC<PhoneNumberInputFieldProps> = ({
   interactionFn,
+  autoFocus,
   ...props
 }) => {
   // console.log('libphonenumber--->>', libphonenumber);
@@ -60,10 +62,10 @@ const PhoneNumberInputField: React.FC<PhoneNumberInputFieldProps> = ({
         <input
           {...field}
           {...props}
-          autoFocus
+          autoFocus={autoFocus}
           value={inputValue}
           onChange={(e) => handleChange(e)}
-          className='font-adventPro font-medium text-[70px] leading-[83.72px] placeholder:text-mason-form-placeholder bg-transparent caret-mason-red text-white appearance-none border-none focus:outline-none w-[448px]'
+          className='font-adventPro font-medium text-[70px] leading-[83.72px] placeholder:text-mason-form-placeholder bg-transparent caret-mason-red text-white appearance-none border-none focus:outline-none w-[500px]'
         />
       </div>
 

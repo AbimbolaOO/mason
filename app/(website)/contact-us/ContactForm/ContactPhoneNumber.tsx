@@ -11,10 +11,11 @@ import {
   ContactPhoneSchema,
 } from '@/models/contact-phone.model';
 import { contactActions } from '@/redux/slices/contactSlice';
-import { useAppDisPatch } from '@/redux/store';
+import { useAppDisPatch, useAppSelector } from '@/redux/store';
 
 const ContactPhoneNumber = () => {
   const dispatch = useAppDisPatch();
+  const { verticalSlideIndex } = useAppSelector((state) => state.contactData);
 
   const onSubmitPhone = (value: ContactPhoneDataType) => {
     dispatch(contactActions.setPhoneSlide(value));
@@ -27,7 +28,7 @@ const ContactPhoneNumber = () => {
       schema={ContactPhoneSchema}
       onSubmit={onSubmitPhone}
     >
-      <div className='flex gap-12 flex-col items-start'>
+      <div className='flex gap-12 flex-col items-start h-[273px]'>
         <div className='flex flex-col gap-6'>
           <BackButtons
             backFn={() => {
@@ -44,6 +45,7 @@ const ContactPhoneNumber = () => {
               id='phone'
               placeholder='type here'
               type='text'
+              autoFocus={verticalSlideIndex === 1}
               interactionFn={(value) => {
                 dispatch(contactActions.setPhoneSlide({ phone: value }));
               }}

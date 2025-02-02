@@ -28,7 +28,7 @@ const ContactFullname = () => {
       schema={ContactNameSchema}
       onSubmit={onSubmitName}
     >
-      <div className='flex gap-12 flex-col items-start'>
+      <div className='flex gap-12 flex-col items-start h-[273px]'>
         <div className='flex flex-col gap-6'>
           <BackButtons
             backFn={() => {

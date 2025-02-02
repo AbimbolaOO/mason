@@ -2,10 +2,7 @@
 import React from 'react';
 
 import { BackButtons, DotIconBtn } from '@/components/Buttons/Buttons';
-import {
-  CustomRadio,
-  CustomRadioGroup,
-} from '@/components/FormComponent/CustomRadioButton';
+import { CustomRadio, CustomRadioGroup } from '@/components/FormComponent/CustomRadioButton';
 import { FormComponent } from '@/components/FormComponent/FormComponent';
 import SubmitButton from '@/components/FormComponent/SubmitButton';
 import {
@@ -27,7 +24,7 @@ const WhatWeDoForm = () => {
 
   const onSubmitOptions = (value: ContactOptionsDataType) => {
     dispatch(contactActions.setOptionSlide(value));
-    dispatch(contactActions.setSlideIndex(1));
+    // dispatch(contactActions.setSlideIndex(1));
   };
 
   return (

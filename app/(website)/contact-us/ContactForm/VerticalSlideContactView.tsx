@@ -1,16 +1,28 @@
+import clsx from 'clsx';
 import React from 'react';
+
+import { useAppSelector } from '@/redux/store';
 
 import ContactChatView from './ContactChatView';
 import ContactFullname from './ContactFullname';
 import ContactPhoneNumber from './ContactPhoneNumber';
 
 const VerticalSlideContactView = () => {
+  const { verticalSlideIndex } = useAppSelector((state) => state.contactData);
+
   return (
-    <div className='grid grid-cols-2 h-[calc(100vh-89px)] bg-mason-black items-center px-[120px] border border-red-500'>
+    <div className='grid grid-cols-2 h-[calc(100vh-89px)] bg-mason-black items-center px-[120px]'>
       {/* Right verticalSlider */}
-      <div className='flex-col flex text-white border border-yellow-300'>
-        <ContactFullname />
-        <ContactPhoneNumber />
+      <div className='h-[273px] overflow-y-hidden w-fit'>
+        <div
+          className={clsx(
+            'flex-col flex text-white transition-all duration-700',
+            verticalSlideIndex === 0 ? 'translate-y-[0%]' : 'translate-y-[-50%]'
+          )}
+        >
+          <ContactFullname />
+          <ContactPhoneNumber />
+        </div>
       </div>
 
       {/* Chat Viewer */}
