@@ -9,7 +9,7 @@ import SliderIcon from '@/components/Icons/SliderIcon';
 
 const MasonAdvantage = () => {
   return (
-    <div className='flex flex-col bg-mason-black h-[calc(100vh-89px)] gap-[100px] px-20'>
+    <div className='flex flex-col bg-black h-[calc(100vh-89px)] gap-[100px] px-20'>
       <BoldOneLineText label='The Mason Advantage' />
       <div className='grid grid-cols-4 gap-[10px]'>
         <VerticalIconCard

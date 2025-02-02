@@ -16,7 +16,7 @@ const OurDevelopmentProcess = () => {
         <VerticalCard
           className='bg-white text-mason-black'
           title='Quality Assurance & Testing'
-          description='At this stage, the team’s primary focus is ensuring the system operates as intended consistently. We conduct thorough system and integration testing, perform user acceptance testing (UAT), and verify that performance, security, and scalability standards are met.'
+          description={`At this stage, the teams primary focus is ensuring the system operates as intended consistently. We conduct thorough system and integration testing, perform user acceptance testing (UAT), and verify that performance, security, and scalability standards are met.`}
         />
       </div>
     </div>
