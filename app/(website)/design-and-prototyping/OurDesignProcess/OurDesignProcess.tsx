@@ -1,0 +1,26 @@
+import React from 'react';
+
+import BoldOneLineText from '@/components/Cards/BoldOneLineText/BoldOneLineText';
+import VerticalCard from '@/components/Cards/VerticalCard/VerticalCard';
+
+const OurDesignProcess = () => {
+  return (
+    <div className='bg-cyan-500 h-fit gap-20 flex flex-col px-20 pb-[140px]'>
+      <BoldOneLineText label='Our Design Process' />
+      <div className='grid grid-cols-2 gap-20'>
+        <VerticalCard
+          className='bg-[#F8D9D9]'
+          title='Design Systems on Figma'
+          description='Our in-depth research techniques are founded on business branding and its holistic goals in creating reusable UI component libraries for style guide consistency in ensuring faster design output and uniformity across client projects.'
+        />
+        <VerticalCard
+          className='bg-mason-purple text-white'
+          title='Creative Design Solutions'
+          description='We think out of the box and love to engage creatively with business solutions that cater to people ensuring seamless user experiences, simple yet elegant user interfaces with a strong focus on conceptualized solutions which are refined until client satisfaction.'
+        />
+      </div>
+    </div>
+  );
+};
+
+export default OurDesignProcess;
