@@ -62,6 +62,7 @@ const ReachOutToUs = () => {
             src='/static/gif/reach-out-bg.gif'
             alt='background image'
             fill
+            unoptimized
             className='object-center'
           />
         </div>

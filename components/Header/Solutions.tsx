@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 import HeaderDropDown from './HeaderDropDown';
@@ -18,15 +19,17 @@ const Solutions = () => {
     <div className='grid grid-cols-[34%_66%] w-full rounded-[24px] overflow-hidden'>
       {/* LEFT */}
       <div className='p-9 text-mason-black text-xl leading-[23.64px] flex flex-col gap-5 bg-white'>
-        <div className='flex gap-3'>
+        <div className='flex gap-3 cursor-default'>
           Consultancy{' '}
           <div className='text-[12px] leading-5 text-mason-badge-txt bg-mason-badge-bg flex items-center justify-center bg-[rgba(0, 183, 63, 0.1)] px-3 py-1 rounded-[8px]'>
             Free
           </div>
         </div>
-        <div>Discovery and Planning</div>
-        <div>Design and Prototyping</div>
-        <div>Software and API Development</div>
+        <Link href={'discovery-and-planning'}>Discovery and Planning</Link>
+        <Link href={'design-and-prototyping'}>Design and Prototyping</Link>
+        <Link href={'software-and-api-development'}>
+          Software and API Development
+        </Link>
       </div>
 
       {/* RIGHT */}
