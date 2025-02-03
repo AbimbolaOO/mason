@@ -59,7 +59,7 @@ export const CenterTextInputField: React.FC<InputFieldProps> = ({
       <input
         {...field}
         {...props}
-        autoFocus
+        // autoFocus
         // onClick={() => setCenterAlign(true)}
         className={clsx(
           'font-adventPro font-medium text-[70px] leading-[83.72px] placeholder:text-mason-form-placeholder bg-transparent caret-mason-red text-white appearance-none border-none focus:outline-none text-center w-[500px]'

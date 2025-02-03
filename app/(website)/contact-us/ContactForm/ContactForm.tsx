@@ -48,7 +48,7 @@ const ContactForm = () => {
         trigger: containerRef.current,
         start: 'top 20%',
         animation: scatterIcons,
-        markers: true,
+        // markers: true,
         invalidateOnRefresh: true,
       });
     },
