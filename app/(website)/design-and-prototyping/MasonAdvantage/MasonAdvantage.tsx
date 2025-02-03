@@ -9,29 +9,44 @@ import SliderIcon from '@/components/Icons/SliderIcon';
 
 const MasonAdvantage = () => {
   return (
-    <div className='flex flex-col bg-black h-[calc(100vh-89px)] gap-[100px] px-20'>
+    <div className='flex flex-col bg-mason-black h-[calc(100vh-89px)] gap-[100px] max-md:gap-[32px] px-20 max-md:h-fit'>
       <BoldOneLineText label='The Mason Advantage' />
-      <div className='grid grid-cols-4 gap-[10px]'>
+      <div className='grid grid-cols-4 gap-[10px] max-md:grid-cols-1 max-md:gap-8'>
         <VerticalIconCard
           icon={<LighteningIcon />}
-          description='Flexible solutions & rapid prototyping for testing'
+          description={
+            <span>
+              Flexible solutions & rapid <br className='hidden max-md:block' />
+              prototyping for testing
+            </span>
+          }
         />
         <VerticalIconCard
           icon={<MedalIcon />}
           description={
-            <div>
+            <span>
               Seasoned product <br />
               designers
-            </div>
+            </span>
           }
         />
         <VerticalIconCard
           icon={<SliderIcon />}
-          description='Robust UX channels and application designs'
+          description={
+            <span>
+              Robust UX channels and <br className='hidden max-md:block' />
+              application designs
+            </span>
+          }
         />
         <VerticalIconCard
           icon={<RadarIcon />}
-          description='Continued iterations and support post-launch'
+          description={
+            <span>
+              Continued iterations and support
+              <br className='hidden max-md:block' /> post-launch
+            </span>
+          }
         />
       </div>
     </div>

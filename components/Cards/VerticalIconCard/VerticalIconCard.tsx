@@ -12,7 +12,7 @@ const VerticalIconCard: React.FC<VerticalIconCardProps> = ({
   return (
     <div className='flex flex-col items-center'>
       <div className='bg-mason-icon-bg p-[25px] rounded-[16.67px]'>{icon}</div>
-      <div className='text-center text-[23px] leading-[41px] text-white py-3'>
+      <div className='text-center text-[23px] leading-[41px] max-md:text-[18px] max-md:leading-[32px] text-white py-3'>
         {description}
       </div>
     </div>

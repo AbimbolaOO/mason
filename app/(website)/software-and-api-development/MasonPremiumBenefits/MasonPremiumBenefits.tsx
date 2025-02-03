@@ -9,9 +9,9 @@ import SuperLightenIcon from '@/components/Icons/SuperLightenIcon';
 
 const MasonPremiumBenefits = () => {
   return (
-    <div className='flex flex-col bg-mason-black h-[calc(100vh-89px)] gap-[100px] px-20'>
+    <div className='flex flex-col bg-mason-black h-[calc(100vh-89px)] gap-[100px] max-md:gap-[32px] px-20 max-md:h-fit'>
       <BoldOneLineText label={`Mason's Premium Benefits`} />
-      <div className='grid grid-cols-4 gap-[10px]'>
+      <div className='grid grid-cols-4 gap-[10px] max-md:grid-cols-1 max-md:gap-8'>
         <VerticalIconCard
           icon={<SuperLightenIcon />}
           description='Faster time to market'
@@ -19,10 +19,10 @@ const MasonPremiumBenefits = () => {
         <VerticalIconCard
           icon={<BadgeIcon />}
           description={
-            <div>
+            <span>
               Seasoned product <br />
               consultants
-            </div>
+            </span>
           }
         />
         <VerticalIconCard
