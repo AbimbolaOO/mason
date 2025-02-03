@@ -24,13 +24,13 @@ const scrollingText = [
 
 const Hero = () => {
   return (
-    <div className='h-screen-minus-header bg-mason-black flex flex-col justify-center gap-[28px]'>
-      <div className='flex flex-col font-adventPro font-semibold text-6xl leading-[100px] text-white self-center text-center'>
+    <div className='h-screen-minus-header bg-mason-black flex flex-col justify-center gap-[28px] max-md:gap-10'>
+      <div className='flex flex-col font-adventPro font-semibold text-6xl max-md:text-[30px] leading-[100px] max-md:leading-[50px] text-white self-center text-center'>
         <div>Building and Shipping.</div>
         <div> It’s What We Do.</div>
       </div>
       <div className='grid *:col-start-1 *:row-start-1'>
-        <div className='relative h-[calc(40vh)]'>
+        <div className='relative h-[calc(40vh)] max-md:h-[175px]'>
           <Image
             src='/static/svg/about-us-strip.svg'
             alt='paper strip'

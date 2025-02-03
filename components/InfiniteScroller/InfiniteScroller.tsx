@@ -18,7 +18,7 @@ const InfiniteScroller: React.FC<InfiniteScrollerProps> = ({
     <div className='flex w-full flex-nowrap overflow-hidden py-4 scroll-smooth group'>
       <div
         className={clsx(
-          'flex items-center *:ml-14 group-hover:[animation-play-state:paused]',
+          'flex items-center *:ml-14 max-md:*:ml-[25px] group-hover:[animation-play-state:paused]',
           reverse ? 'animate-scrollReverse' : 'animate-scroll'
         )}
       >
@@ -28,7 +28,7 @@ const InfiniteScroller: React.FC<InfiniteScrollerProps> = ({
       </div>
       <div
         className={clsx(
-          'flex items-center *:ml-14 group-hover:[animation-play-state:paused]',
+          'flex items-center *:ml-14 max-md:*:ml-[25px] group-hover:[animation-play-state:paused]',
           reverse ? 'animate-scrollReverse' : 'animate-scroll'
         )}
       >

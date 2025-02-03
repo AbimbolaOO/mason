@@ -63,7 +63,7 @@ const ReachOutToUs = () => {
             alt='background image'
             fill
             unoptimized
-            className='object-center'
+            className='object-center max-md:object-fill'
           />
         </div>
 
@@ -72,16 +72,16 @@ const ReachOutToUs = () => {
           {/* main content */}
           <div
             ref={container}
-            className='w-full h-full grid place-content-center gap-[177px]'
+            className='w-full h-full grid place-content-center gap-[177px] max-md:flex max-md:flex-col'
           >
             <div className='flex justify-center items-center flex-col'>
-              <div className='text-[35px] leading-[41px] text-white'>
+              <div className='text-[35px] leading-[41px] max-md:text-[18px] max-md:leading-[21.2px] text-white'>
                 Ready to bring your projects to life?
               </div>
               {/* 00-----000 */}
               <div
                 ref={hoverContainer}
-                className='font-medium font-adventPro text-[100px] leading-[150px] text-white'
+                className='font-medium font-adventPro text-[100px] leading-[150px] max-md:text-[45px] max-md:leading-[84px] text-white'
               >
                 <Link href='contact-us'>Reach Out to Us!</Link>
                 <div className='-mt-6 w-full rounded-full overflow-hidden'>
@@ -93,7 +93,8 @@ const ReachOutToUs = () => {
             {/* <Link href={'#footer'}> */}
             <button
               onClick={handleScrollBtnClick}
-              className='text-mason-black bg-white rounded-xl text-[15px] leading-[20px] p-[17px] w-fit justify-self-center flex gap-2 items-center'
+              className='text-mason-black bg-white rounded-xl text-[15px] leading-[20px] p-[17px] w-fit
+              justify-self-center flex gap-2 items-center max-md:self-center max-md:justify-items-stretch'
             >
               <div className='py-2 px-[10px]'>
                 <ArrowDownIcon />

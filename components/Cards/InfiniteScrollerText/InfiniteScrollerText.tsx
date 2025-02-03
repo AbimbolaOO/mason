@@ -9,7 +9,7 @@ const InfiniteScrollerText: React.FC<InfiniteScrollerTextProps> = ({
   return (
     <div
       key={label}
-      className='text-mason-grey-light font-semibold text-[54px] file:leading-[64.58px] hover:text-mason-red cursor-default font-adventPro whitespace-nowrap'
+      className='text-mason-grey-light font-semibold text-[54px] leading-[64.58px] max-md:text-[27px] max-md:leading-[32px] hover:text-mason-red cursor-default font-adventPro whitespace-nowrap'
     >
       {label}
     </div>
