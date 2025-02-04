@@ -24,7 +24,7 @@ const scrollingText = [
 
 const Hero = () => {
   return (
-    <div className='h-screen-minus-header bg-mason-black flex flex-col justify-center gap-[28px] max-md:gap-10'>
+    <div className='h-screen-minus-header max-md:h-screen bg-mason-black flex flex-col justify-center gap-[28px] max-md:gap-10'>
       <div className='flex flex-col font-adventPro font-semibold text-6xl max-md:text-[30px] leading-[100px] max-md:leading-[50px] text-white self-center text-center'>
         <div>Building and Shipping.</div>
         <div> It’s What We Do.</div>

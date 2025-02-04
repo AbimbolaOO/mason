@@ -18,7 +18,7 @@ const HorizontalImgCard: React.FC<HorizontalImgCardProps> = ({
   buttonUrl,
 }) => {
   return (
-    <div className='grid grid-cols-[1fr_auto] max-md:flex max-md:flex-col-reverse bg-black items-center pl-20 pr-[36px] gap-[117px] max-md:gap-0'>
+    <div className='grid grid-cols-[1fr_auto] max-md:flex max-md:flex-col-reverse max-md:items-center max-md:justify-center bg-black items-center pl-20 max-md:px-4 pr-[36px] gap-[117px] max-md:gap-0'>
       <div className='flex-col flex gap-12 max-md:gap-6 pb-[86px] text-white max-md:text-center'>
         <div className='text-6xl max-md:text-[30px] leading-[100px] max-md:leading-[50px] flex flex-col items-center justify-center h-fit font-semibold font-adventPro'>
           {topTopText}

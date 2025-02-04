@@ -68,7 +68,7 @@ const ReachOutToUs = () => {
         </div>
 
         {/* Background */}
-        <div className='z-10 h-screen-minus-header bg-mason-transparency-layer'>
+        <div className='z-10 h-screen-minus-header max-md:h-[calc(100vh-60px)] bg-mason-transparency-layer'>
           {/* main content */}
           <div
             ref={container}
