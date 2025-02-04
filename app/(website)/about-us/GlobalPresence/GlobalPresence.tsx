@@ -7,26 +7,25 @@ const GlobalPresence = () => {
   return (
     <div>
       {/* Globe section */}
-      <div className='grid pl-20 py-[175px] pr-[120px] max-md:p-8 bg-white grid-cols-2 gap-[82px] max-md:flex-col-reverse max-md:flex'>
+      <div className='grid pl-20 py-[175px] pr-[120px] max-md:p-8 bg-white grid-cols-2 gap-[82px] max-md:gap-6 max-md:flex-col-reverse max-md:flex'>
         <div className='text-6xl leading-[100px] max-md:text-[30px] max-md:leading-[50px] font-adventPro self-center font-semibold'>
           We are creating global products that solve complex problems
         </div>
-        {/* <div>LOL</div> */}
-        <div className='relative border border-red-600 w-[600px] h-[600px]'>
+
+        <div className='relative border border-red-600 w-[600px] h-[600px] max-md:h-auto max-md:w-auto'>
           <Image
-            src='/static/svg/globe.svg'
-            alt='paper strip'
-            fill
-            // width={600}
-            // height={600}
+            src='/static/img/globe.png'
+            alt='globe'
+            width={600}
+            height={600}
             priority
-            className='object-cover object-center'
+            className='object-contain'
           />
         </div>
       </div>
 
       {/* Cards section */}
-      <div className='grid *:col-start-1 *:row-start-1'>
+      <div className='grid *:col-start-1 *:row-start-1 max-md:bg-mason-bg-gradient'>
         <div className='relative h-full max-md:hidden'>
           <Image
             src='/static/svg/mission.svg'

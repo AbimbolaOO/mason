@@ -25,6 +25,7 @@ export default {
 
       fontFamily: {
         'adventPro': ['var(--font-adventPro)'],
+        'aBeeZee': ['var(--aBeeZee)'],
       },
       height: {
         'screen-minus-header': 'calc(100vh - 88px)',
@@ -46,6 +47,7 @@ export default {
         "mason-error": "rgba(216, 35, 29, 1)",
         "mason-tert-text": "#6C6D71",
         "mason-red": "#D8231D",
+        "mason-lighter-red": "rgba(255, 8, 0, 0.05)",
         "mason-light-red": "rgba(216, 35, 29, 0.2)",
         "mason-stroke": "292D32",
         "mason-icon-bg": "rgba(216, 35, 29, 0.1)",
@@ -58,7 +60,9 @@ export default {
 
       backgroundImage: {
         "mason-linear-stroke": "linear-gradient(89.21deg, rgba(255, 255, 255, 0.1) 0%, rgba(102, 102, 102, 0.8) 99.92%)",
-        "tx-gradient": "linear-gradient(90deg, #C8C8C8 4.29%, #878787 97.5%)"
+        "tx-gradient": "linear-gradient(90deg, #C8C8C8 4.29%, #878787 97.5%)",
+        "mason-bg-gradient": "linear-gradient(112.95deg, #FFF8F8 6.91%, #FFFFFF 33.08%, #EEEEEE 84.93%, #F7F3F3 101.72%)"
+
       }
     },
   },
