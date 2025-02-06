@@ -123,7 +123,7 @@ const HorizontalCardScroller: React.FC<HorizontalCardScrollerProps> = ({
 
 export default HorizontalCardScroller;
 
-const HorizontalCard: React.FC<ICellData> = ({
+export const HorizontalCard: React.FC<ICellData> = ({
   icon,
   label,
   description,
