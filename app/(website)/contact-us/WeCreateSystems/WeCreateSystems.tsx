@@ -4,7 +4,7 @@ import HeroTextCard from '@/components/Cards/HeroTextCard/HeroTextCard';
 
 const WeCreateSystems = () => {
   return (
-    <div className='bg-orange-500 h-[calc(100vh-89px)] text-white grid place-content-center'>
+    <div className='bg-mason-black h-[calc(100vh-89px)] text-white grid place-content-center'>
       <HeroTextCard
         topText='We create systems that showcase concepts with'
         bottomText='professional visuals through iteration.'
