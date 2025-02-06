@@ -51,7 +51,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ toggleFooterFn }) => {
   return (
-    <footer className='footer h-[100vh] bg-white flex pb-10 top-0 sticky flex-col justify-between z-40 max-md:z-[200] w-[100vw]'>
+    <footer className='footer h-[100vh] bg-white flex pb-10 top-0 sticky flex-col justify-between z-40 w-[100vw]'>
       <Header footer toggleFooterFn={toggleFooterFn} />
       <div className='flex flex-col gap-[148.7px] px-20 max-md:px-4 mt-[60px] max-md:mt-6 max-md:gap-0 max-md:h-full max-md:justify-between'>
         <div className='grid grid-cols-[59%_41%] max-md:flex max-md:flex-col-reverse max-md:gap-10 max-md:mt-0'>

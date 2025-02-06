@@ -51,6 +51,18 @@ const ReachOutToUs = () => {
 
   const handleScrollBtnClick = () => {
     setShowFooter(true);
+    const element = document.querySelector('.removeHeaderClass');
+    if (element) {
+      setTimeout(() => {
+        element.classList.add('hideableHeader');
+      }, 270);
+    }
+  };
+
+  const handleToggleFunction = () => {
+    setShowFooter(false);
+    const element = document.querySelector('.removeHeaderClass');
+    element?.classList.remove('hideableHeader');
   };
 
   return (
@@ -116,7 +128,7 @@ const ReachOutToUs = () => {
           showFooter ? 'top-[calc(0%)]' : 'top-[100%]'
         )}
       >
-        <Footer toggleFooterFn={() => setShowFooter(false)} />
+        <Footer toggleFooterFn={handleToggleFunction} />
       </div>
     </div>
   );

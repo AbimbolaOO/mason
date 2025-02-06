@@ -98,8 +98,9 @@ export default function Header({
         {/* Comeback here to address the issues */}
         <header
           className={clsx(
-            'bg-mason-black flex justify-between p-4 w-full h-fit sticky top-0 z-[110] transition-colors',
-            reveal || footer ? 'bg-white' : `bg-mason-black`
+            'bg-mason-black flex justify-between p-4 w-full h-fit z-[110] transition-colors',
+            reveal || footer ? 'bg-white' : `bg-mason-black`,
+            footer ? 'sticky top-0' : `fixed removeHeaderClass`
           )}
         >
           <Link href='/' className='flex items-center'>
@@ -131,7 +132,7 @@ export default function Header({
               href={'about-us'}
               onClick={() => {
                 setReveal(!reveal);
-                toggleFooterFn && toggleFooterFn();
+                if (toggleFooterFn) toggleFooterFn();
               }}
             >
               <MobileHeaderText>About</MobileHeaderText>
@@ -176,10 +177,7 @@ export default function Header({
           >
             <button
               className={clsx(
-                footer
-                  ? 'bg-white text-mason-black'
-                  : 'text-white bg-mason-black',
-                `rounded-lg px-4 py-3 w-full flex items-center justify-between`
+                `rounded-lg px-4 py-3 w-full flex items-center justify-between text-white bg-mason-black`
               )}
             >
               Book a Free Consultation{' '}
