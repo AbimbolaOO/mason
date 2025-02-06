@@ -57,7 +57,10 @@ const ContactForm = () => {
 
   return (
     // <div ref={containerRef} className='grid *:col-start-1 *:row-start-1'>
-    <div ref={containerRef} className='relative bg-mason-black w-full'>
+    <div
+      ref={containerRef}
+      className='relative bg-mason-black w-full max-md:h-screen'
+    >
       <div
         className={clsx(
           'show-icon hand-icon absolute bottom-[calc(50%-200px)] left-[calc(50%-200px)] h-fit invisible opacity-0 z-0',

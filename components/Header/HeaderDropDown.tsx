@@ -21,8 +21,11 @@ const HeaderDropDown: React.FC<HeaderDropDownProps> = ({ label, children }) => {
         className={clsx(
           'invisible absolute top-[150%] opacity-0 flex flex-col group-hover:visible group-hover:opacity-100 group-hover:top-[100%] transition-all duration-500 w-[calc(100vw-160px)]',
           label === 'Projects'
-            ? 'right-[calc(0px-540%)]'
-            : 'right-[calc(0px-362%)]'
+            ? 'right-[calc(0px-410%)]'
+            : 'right-[calc(0px-250%)]'
+          // label === 'Projects'
+          //   ? 'right-[calc(0px-540%)]'
+          //   : 'right-[calc(0px-362%)]'
         )}
       >
         {/* Empty space div */}

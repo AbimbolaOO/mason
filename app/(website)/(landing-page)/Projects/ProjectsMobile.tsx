@@ -18,7 +18,7 @@ const ProjectsMobile = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className='flex flex-col justify-center'>
+    <div className='flex flex-col justify-center md:hidden'>
       {/* Title */}
       <div className='mx-4'>
         <TitleCard
