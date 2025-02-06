@@ -5,7 +5,7 @@ import VerticalCard from '@/components/Cards/VerticalCard/VerticalCard';
 
 const OurDevelopmentProcess = () => {
   return (
-    <div className='bg-cyan-500 h-fit gap-20 max-md:gap-[50px] flex flex-col px-20 max-md:px-4 pb-[140px]'>
+    <div className='bg-mason-black h-fit gap-20 max-md:gap-[50px] flex flex-col px-20 max-md:px-4 pb-[140px]'>
       <BoldOneLineText label='Our Development Process' />
       <div className='grid grid-cols-2 gap-20 max-md:grid-cols-1 max-md:gap-10'>
         <VerticalCard

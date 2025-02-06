@@ -12,7 +12,7 @@ const HeroTextCard: React.FC<HeroTextCardProps> = ({
   footText,
 }) => {
   return (
-    <div className='flex flex-col gap-12 items-center border'>
+    <div className='flex flex-col gap-12 items-center'>
       <div className='max-md:text-[30px] text-6xl max-md:leading-[50px] leading-[100px] flex flex-col items-center justify-center h-fit text-white font-semibold font-adventPro text-center'>
         <div>{topText}</div>
         <div>{bottomText}</div>

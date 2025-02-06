@@ -1,6 +1,7 @@
 import React from 'react';
 
-import ContactForm from './ContactForm/ContactForm';
+import ContactForm from '@/components/ContactForm/ContactForm';
+
 import Hero from './Hero/Hero';
 import MasonAdvantage from './MasonAdvantage/MasonAdvantage';
 import OurDesignProcess from './OurDesignProcess/OurDesignProcess';

@@ -1,5 +1,11 @@
 import React from 'react';
 
+import ContactForm from '@/components/ContactForm/ContactForm';
+
 export default function page() {
-  return <div>Book a free consultation cheapskate</div>;
+  return (
+    <div>
+      <ContactForm />
+    </div>
+  );
 }

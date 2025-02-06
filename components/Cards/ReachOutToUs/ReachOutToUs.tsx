@@ -95,7 +95,7 @@ const ReachOutToUs = () => {
                 ref={hoverContainer}
                 className='font-medium font-adventPro text-[100px] leading-[150px] max-md:text-[45px] max-md:leading-[84px] text-white'
               >
-                <Link href='contact-us'>Reach Out to Us!</Link>
+                <Link href='book-a-free-consultation'>Reach Out to Us!</Link>
                 <div className='-mt-6 w-full rounded-full overflow-hidden'>
                   <div className='scaling-line h-2 w-full origin-left bg-white rounded-full invisible opacity-0'></div>
                 </div>

@@ -67,7 +67,7 @@ export default function Header({
 
             <SolutionsDropdown />
 
-            <Link
+            {/* <Link
               href={'/contact-us'}
               className={clsx(
                 pathname.includes('/contact-us') && 'bg-cyan-950',
@@ -75,7 +75,7 @@ export default function Header({
               )}
             >
               Contact Us
-            </Link>
+            </Link> */}
           </div>
 
           <Link href={'book-a-free-consultation'}>
@@ -170,9 +170,9 @@ export default function Header({
               ]}
               revealFn={() => setReveal(!reveal)}
             />
-            <Link href={'contact-us'} onClick={() => setReveal(!reveal)}>
+            {/* <Link href={'contact-us'} onClick={() => setReveal(!reveal)}>
               <MobileHeaderText>Contact Us</MobileHeaderText>
-            </Link>
+            </Link> */}
           </div>
 
           {/* Button */}

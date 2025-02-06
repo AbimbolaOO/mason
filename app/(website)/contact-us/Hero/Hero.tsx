@@ -4,7 +4,7 @@ import HeroTextCard from '@/components/Cards/HeroTextCard/HeroTextCard';
 
 const Hero = () => {
   return (
-    <div className='bg-red-500 h-[calc(100vh-89px)] max-md:h-[100vh] text-white grid place-content-center'>
+    <div className='bg-mason-black h-[calc(100vh-89px)] max-md:h-[100vh] text-white grid place-content-center'>
       <HeroTextCard
         topText='We design intuitive digital experiences with'
         bottomText='prototypes, offering solutions for all businesses.'
