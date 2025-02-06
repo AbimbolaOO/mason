@@ -47,3 +47,12 @@ body {
 .hideableHeader {
   display: none;
 }
+
+.hide-the-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-the-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

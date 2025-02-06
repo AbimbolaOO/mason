@@ -8,8 +8,7 @@ import { IndustriesData } from './IndustriesData';
 
 export default function Industries() {
   return (
-    // <div className='border border-yellow-300 flex flex-col'>
-    <div className='h-screen-minus-header flex flex-col md:justify-between max-md:gap-8'>
+    <div className='h-screen-minus-header max-md:h-fit max-md:mb-[80px] flex flex-col md:justify-between max-md:gap-8'>
       {/* Title */}
       <div className='pl-20 max-md:pl-4 -mb-16 max-md:mb-0'>
         <TitleCard

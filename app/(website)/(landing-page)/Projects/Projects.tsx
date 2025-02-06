@@ -16,7 +16,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  // const sliderWrapper = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
@@ -88,7 +87,7 @@ const Projects = () => {
   );
 
   return (
-    <div className='flex flex-col justify-center'>
+    <div className='flex flex-col justify-center max-md:hidden'>
       {/* Title */}
       <div className='pl-20 pt-[135px] bg-white'>
         <TitleCard
@@ -146,7 +145,7 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
   return (
     <>
       {/* LEFT TEXT AREA */}
-      <div className='text-white  w-[780px] ml-20'>
+      <div className='text-white  w-[540px] ml-20'>
         {/* Text Area */}
         <div className='text-[20px] leading-[40px] flex flex-col gap-6'>
           {/* Top */}

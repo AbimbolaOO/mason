@@ -7,7 +7,7 @@ import { accordionImages, solutionData } from './SolutionsData';
 
 export default function FutureProofDigitalSolutions() {
   return (
-    <div className='flex flex-col px-20 max-md:px-4 max-md:mt-20 border border-yellow-300 gap-[100px] max-md:gap-8 pb-[100px]'>
+    <div className='flex flex-col px-20 max-md:px-4 max-md:mt-20 gap-[100px] max-md:gap-8 pb-[100px]'>
       {/* Title */}
       <TitleCard
         title='Future-Proof Digital Solutions'

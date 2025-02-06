@@ -9,7 +9,7 @@ interface IProjectData {
 export const ProjectData: IProjectData[] = [
   {
     title: 'Darum',
-    description: `We teamed up with Darum to redefine last-mile delivery for Nigeria's 41 million MSMEs. By providing strategic consulting, design, and development, we created a robust external and internal platform that streamlines connections between businesses and logistics providers, boosting efficiency and scaling growth in Nigeria's dynamic market.`,
+    description: `We partnered with Darum to enhance last-mile delivery for Nigeria’s 41M MSMEs. Through strategic consulting, design, and development, we built a seamless platform that connects businesses with logistics providers, improving efficiency and driving growth.`,
 
     servicesOffered: [
       'Product Consulting and Management',
@@ -23,7 +23,7 @@ export const ProjectData: IProjectData[] = [
 
   {
     title: 'Ethiopian Cargo',
-    description: `Ethiopian Airlines partnered with us to optimize its logistics and streamline last-mile delivery in Nigeria. Using our expertise in product consulting, design, and development, we launched an integrated platform that enhanced their operations, expanded service offerings, and boosted customer satisfaction, solidifying their position in the last-mile delivery market here in Nigeria.`,
+    description: `Ethiopian Airlines partnered with us to optimize logistics and last-mile delivery in Nigeria. Through product consulting, design, and development, we built an integrated platform that improved operations, expanded services, and enhanced customer satisfaction."`,
 
     servicesOffered: [
       'Product Consulting and Management',
@@ -37,7 +37,7 @@ export const ProjectData: IProjectData[] = [
 
   {
     title: 'Dwelling',
-    description: `Shleep partnered with our team at Mason to enhance their property management and resident engagement platform. Through a blend of strategic consulting, design innovation, and targeted development, we delivered a solution that simplifies tenant communication, maintenance management, and payment processing. This has improved both operational efficiency and the resident experience using the application.`,
+    description: `Dwelling partnered with us at Mason to enhance their property management and resident engagement platform. Through strategic consulting, design, and development, we created a solution that streamlines tenant communication, maintenance, and payments, boosting efficiency and the resident experience.`,
 
     servicesOffered: [
       'Product Consulting and Management',

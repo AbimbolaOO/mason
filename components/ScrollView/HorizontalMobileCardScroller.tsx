@@ -25,7 +25,7 @@ const HorizontalMobileCardScroller: React.FC<
   HorizontalMobileCardScrollerProps
 > = ({ cellData }) => {
   return (
-    <div className='w-full overflow-auto flex overscroll-x-contain border border-red-500'>
+    <div className='w-full overflow-auto flex overscroll-x-contain'>
       <div className='grid grid-flow-col pl-[80px] max-md:pl-4'>
         {cellData.map((data, index) => (
           <HorizontalCard key={index} {...data} />
