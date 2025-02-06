@@ -53,6 +53,7 @@ export default function Header({
         >
           <div className='flex gap-4 [&>*]:px-2'>
             <Link
+              onClick={() => toggleFooterFn && toggleFooterFn()}
               href={'/about-us'}
               className={clsx(
                 pathname.includes('/about-us') && 'bg-cyan-950',
@@ -94,14 +95,15 @@ export default function Header({
 
       {/* Mobile Header */}
       <div className='relative md:hidden'>
+        {/* Comeback here to address the issues */}
         <header
           className={clsx(
-            'bg-mason-black flex justify-between p-4 w-full h-fit fixed z-[110] transition-colors',
-            reveal ? 'bg-white' : `bg-mason-black`
+            'bg-mason-black flex justify-between p-4 w-full h-fit sticky top-0 z-[110] transition-colors',
+            reveal || footer ? 'bg-white' : `bg-mason-black`
           )}
         >
           <Link href='/' className='flex items-center'>
-            {!reveal ? (
+            {!reveal && !footer ? (
               <CompanyLogo />
             ) : (
               <div onClick={() => toggleFooterFn && toggleFooterFn()}>
@@ -111,7 +113,7 @@ export default function Header({
           </Link>
 
           <div className='cursor-pointer' onClick={() => setReveal(!reveal)}>
-            {!reveal ? <HamburgerIcon /> : <CloseIcon />}
+            {!reveal ? <HamburgerIcon currentColor={footer} /> : <CloseIcon />}
           </div>
         </header>
 
@@ -125,7 +127,13 @@ export default function Header({
           )}
         >
           <div className='flex flex-col gap-[30px] rounded-[8px] bg-mason-light-red px-4 py-[30px]'>
-            <Link href={'about-us'} onClick={() => setReveal(!reveal)}>
+            <Link
+              href={'about-us'}
+              onClick={() => {
+                setReveal(!reveal);
+                toggleFooterFn && toggleFooterFn();
+              }}
+            >
               <MobileHeaderText>About</MobileHeaderText>
             </Link>
             <RevealItem
