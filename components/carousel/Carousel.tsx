@@ -25,6 +25,7 @@ const Carousel = () => {
         .timeline({
           duration: 1,
           repeat: -1,
+          invalidateOnRefresh: true,
         })
         .to('.slide', {
           x: slideIn,

@@ -29,6 +29,7 @@ export default {
       },
       height: {
         'screen-minus-header': 'calc(100vh - 88px)',
+        'mobile-screen': 'calc(100vh - 60px)',
       },
 
       colors: {

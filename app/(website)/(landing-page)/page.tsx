@@ -8,11 +8,11 @@ import ReachOutToUsContent from './ReachOutToUs/ReachOutToUsContent';
 export default function Home() {
   return (
     <div className='border-2 border-cyan-900'>
-      <Hero />
+      {/* <Hero /> */}
       <GlobalOrganization />
       <FutureProofDigitalSolutions />
       <Industries />
-      <Projects />
+      {/* <Projects /> */}
       <ReachOutToUsContent />
     </div>
   );

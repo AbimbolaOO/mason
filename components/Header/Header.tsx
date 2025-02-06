@@ -107,7 +107,12 @@ export default function Header({
             {!reveal && !footer ? (
               <CompanyLogo />
             ) : (
-              <div onClick={() => toggleFooterFn && toggleFooterFn()}>
+              <div
+                onClick={() => {
+                  setReveal(false);
+                  if (toggleFooterFn) toggleFooterFn();
+                }}
+              >
                 <CompanyBlackLogo />
               </div>
             )}

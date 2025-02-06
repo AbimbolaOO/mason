@@ -88,7 +88,7 @@ const HorizontalCardScroller: React.FC<HorizontalCardScrollerProps> = ({
   });
 
   return (
-    <div ref={containerRef} className='flex flex-col gap-[70px]'>
+    <div ref={containerRef} className='flex flex-col gap-[70px] max-md:hidden'>
       {/* Control Arrows */}
       <div className='flex gap-6 ml-auto mr-20'>
         <div

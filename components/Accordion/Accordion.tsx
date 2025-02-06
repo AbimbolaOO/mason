@@ -57,7 +57,7 @@ export const Accordion: React.FC<
   };
 
   return (
-    <div className='grid grid-cols-2'>
+    <div className='grid grid-cols-2 max-md:flex max-md:flex-col-reverse max-md:gap-8'>
       <div className='flex flex-col'>
         {React.Children.map(children, (child, index) => {
           if (React.isValidElement<IAccordion>(child)) {
@@ -73,7 +73,7 @@ export const Accordion: React.FC<
         })}
       </div>
 
-      <div className='ml-10 relative'>
+      <div className='ml-10 max-md:ml-0 relative'>
         <Image
           src={`/static/img/${imageList ? imageList[state.index]?.imageName : ''}.png`}
           alt='accordion image'
