@@ -56,7 +56,7 @@ export default function Header({
               onClick={() => toggleFooterFn && toggleFooterFn()}
               href={'/about-us'}
               className={clsx(
-                pathname.includes('/about-us') && 'bg-cyan-950',
+                pathname.includes('/about-us') && 'text-mason-red font-black',
                 `flex items-center`
               )}
             >
@@ -169,6 +169,7 @@ export default function Header({
                 },
               ]}
               revealFn={() => setReveal(!reveal)}
+              toggleFooterFn={toggleFooterFn}
             />
             {/* <Link href={'contact-us'} onClick={() => setReveal(!reveal)}>
               <MobileHeaderText>Contact Us</MobileHeaderText>
@@ -205,19 +206,24 @@ interface RevealItemProps {
   revealData: { label: string; link?: string }[];
   label: string;
   revealFn: (...args: any) => void;
+  toggleFooterFn?: () => void;
 }
 
 const RevealItem: React.FC<RevealItemProps> = ({
   revealData,
   label,
   revealFn,
+  toggleFooterFn,
 }) => {
   const [reveal, setReveal] = useState(false);
   return (
     <div className=''>
       <div
         className='flex justify-between items-center'
-        onClick={() => setReveal(!reveal)}
+        onClick={() => {
+          setReveal(!reveal);
+          if (toggleFooterFn) toggleFooterFn();
+        }}
       >
         <MobileHeaderText>{label}</MobileHeaderText>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExecutionIcon = () => {
+const ExecutionIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       width='360'
@@ -8,6 +8,7 @@ const ExecutionIcon = () => {
       viewBox='0 0 360 360'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      className={className}
     >
       <g filter='url(#filter0_f_1029_2889)'>
         <circle cx='180' cy='180' r='50' fill='#7F5CE2' />

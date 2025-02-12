@@ -4,7 +4,7 @@ import Carousel from '@/components/carousel/Carousel';
 
 export default function GlobalOrganization() {
   return (
-    <div className='border border-purple-900 grid grid-cols-2 max-md:grid-cols-1 px-20 max-md:p-4 h-screen-minus-header max-md:h-fit max-md:gap-[30px] place-content-center'>
+    <div className='grid grid-cols-2 max-md:grid-cols-1 px-20 max-md:p-4 h-screen-minus-header max-md:h-fit max-md:gap-[30px] place-content-center'>
       {/* Carousel */}
       <Carousel />
 

@@ -8,7 +8,7 @@ import ReachOutToUsContent from './ReachOutToUs/ReachOutToUsContent';
 
 export default function Home() {
   return (
-    <div className='border-2 border-cyan-900'>
+    <div className=''>
       <Hero />
       <GlobalOrganization />
       <FutureProofDigitalSolutions />

@@ -12,9 +12,9 @@ const GlobalPresence = () => {
           We are creating global products that solve complex problems
         </div>
 
-        <div className='relative border border-red-600 w-[600px] h-[600px] max-md:h-auto max-md:w-auto'>
+        <div className='relative w-[600px] h-[600px] max-md:h-auto max-md:w-auto'>
           <Image
-            src='/static/img/globe.png'
+            src='/static/gif/globe.gif'
             alt='globe'
             width={600}
             height={600}

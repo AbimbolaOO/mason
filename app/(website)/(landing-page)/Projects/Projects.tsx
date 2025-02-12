@@ -80,6 +80,7 @@ const Projects = () => {
           // onEnter: () => console.log('lol'),
           // markers: true,
           containerAnimation: horizontalScroll,
+          invalidateOnRefresh: true,
         });
       });
     },

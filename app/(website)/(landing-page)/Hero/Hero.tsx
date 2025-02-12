@@ -15,15 +15,15 @@ export default function Hero() {
   useGSAP(
     () => {
       gsap
-        .timeline({ repeat: -1 })
+        .timeline({ repeat: -1, invalidateOnRefresh: true })
         .set('.top-text', { opacity: 0 })
-        .to('.top-text', { y: -90, stagger: 3, opacity: 1, duration: 1 })
+        .to('.top-text', { y: '-6.5vw', stagger: 3, opacity: 1, duration: 1 })
         .to('.top-text', { y: 0, stagger: 3, duration: 1, opacity: 0 }, '2');
 
       gsap
-        .timeline({ repeat: -1 })
+        .timeline({ repeat: -1, invalidateOnRefresh: true })
         .set('.bottom-text', { opacity: 0 })
-        .to('.bottom-text', { y: 75, stagger: 3, opacity: 1, duration: 1 })
+        .to('.bottom-text', { y: '6.5vw', stagger: 3, opacity: 1, duration: 1 })
         .to('.bottom-text', { y: 0, stagger: 3, duration: 1, opacity: 0 }, '2');
 
       gsap
@@ -96,20 +96,30 @@ export default function Hero() {
   return (
     <div
       ref={container}
-      className='border  border-red-600 h-screen-minus-header bg-mason-black grid place-content-center relative'
+      className='h-screen-minus-header max-md:h-[calc(100vh)] bg-mason-black grid place-content-center relative'
     >
-      <div className='planning absolute top-[-64px] left-[580px]'>
+      <div className='max-md:hidden planning absolute top-[-64px] left-[580px]'>
         <PlanningIcon />
       </div>
-      <div className='execution absolute bottom-[30px] right-[60px]'>
+      <div className='max-md:hidden execution absolute bottom-[30px] right-[60px]'>
         <ExecutionIcon />
       </div>
-      <div className='speed absolute bottom-[40px] left-0'>
+      <div className='max-md:hidden speed absolute bottom-[40px] left-0'>
         <SpeedIcon />
       </div>
 
+      <div className='md:hidden absolute top-[-5vh] right-[3vw] z-10'>
+        <PlanningIcon className='w-[250px]' />
+      </div>
+      <div className='md:hidden absolute bottom-[10vh] right-[1vw]'>
+        <ExecutionIcon className='w-[250px]' />
+      </div>
+      <div className='md:hidden absolute top-[60vh] left-[-10vw]'>
+        <SpeedIcon className='w-[250px]' />
+      </div>
+
       {/* Actual Content */}
-      <div className='text-white text-[100px] leading-[100px] text-center grid w-[100vw] gap-8'>
+      <div className='text-white text-[6.5vw] leading-[6.5vw] text-center grid w-[100vw] gap-[2vw]'>
         <div className='h-[120px] w-full relative overflow-hidden text-center'>
           <div className='top-text absolute top-[100px] w-[1044px] left-[calc(50%-522px)]'>
             Powering Enterprises.

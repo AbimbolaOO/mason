@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SpeedIcon = () => {
+const SpeedIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       width='400'
@@ -8,6 +8,7 @@ const SpeedIcon = () => {
       viewBox='0 0 400 401'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      className={className}
     >
       <g filter='url(#filter0_f_1399_9700)'>
         <circle cx='200' cy='200.877' r='50' fill='white' />

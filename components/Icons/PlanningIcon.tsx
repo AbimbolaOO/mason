@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PlanningIcon = () => {
+const PlanningIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       width='400'
@@ -8,6 +8,7 @@ const PlanningIcon = () => {
       viewBox='0 0 400 400'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      className={className}
     >
       <g filter='url(#filter0_f_1029_2855)'>
         <circle cx='200' cy='200' r='50' fill='#D8231D' />
