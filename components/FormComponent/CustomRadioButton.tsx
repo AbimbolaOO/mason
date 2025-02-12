@@ -13,7 +13,7 @@ export const CustomRadioGroup: React.FC<CustomRadioGroupProps> = ({
   const { errors } = useFormikContext<any>();
 
   return (
-    <div className='flex flex-col gap-6'>
+    <div className='flex flex-col max-md:w-full gap-6'>
       {React.Children.map(children, (child: any) => {
         return React.cloneElement(child, {
           ...child.props,
@@ -46,10 +46,14 @@ export const CustomRadio: React.FC<CustomRadioProps> = ({
 
   return (
     <div className='rounded-[24px] p-[1px] bg-mason-linear-stroke overflow-hidden flex items-center justify-center'>
-      <div className='bg-mason-black rounded-[24px]'>
+      <div className='bg-mason-black rounded-[24px] max-md:w-full'>
         <label className='grid *:col-start-1 *:row-start-1'>
           <input type='radio' {...field} {...props} className='peer hidden' />
-          <div className='rounded-[24px] *:cursor-pointer text-[25px] leading-[45px] cursor-pointer text-mason-light-border-grey p-4 peer-checked:bg-mason-light-red peer-checked:*:bg-tx-gradient peer-checked:*:bg-clip-text'>
+          <div
+            className='rounded-[24px] *:cursor-pointer text-[25px] leading-[45px]
+          max-md:text-[16px] max-md:leading-[25px] cursor-pointer text-mason-light-border-grey p-4
+           peer-checked:bg-mason-light-red peer-checked:*:bg-tx-gradient peer-checked:*:bg-clip-text'
+          >
             <span>{children}</span>
           </div>
         </label>

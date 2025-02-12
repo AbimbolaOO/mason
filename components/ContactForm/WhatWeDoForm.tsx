@@ -31,13 +31,13 @@ const WhatWeDoForm = () => {
   };
 
   return (
-    <div className='h-fit pt-[13px] pb-[100px] grid items-center px-[120px]'>
+    <div className='h-fit pt-[13px] max-md:mt-20 pb-[100px] grid items-center px-[120px] max-md:px-4'>
       <FormComponent
         initialValues={ContactOptionsInitialValues}
         schema={ContactOptionsSchema}
         onSubmit={onSubmitOptions}
       >
-        <div className='grid grid-cols-2 items-center'>
+        <div className='grid grid-cols-2 items-center max-md:flex'>
           <div className='flex gap-12 flex-col items-start'>
             <div className='flex flex-col gap-6'>
               <BackButtons
@@ -46,7 +46,7 @@ const WhatWeDoForm = () => {
                 }}
               />
               <div className='flex gap-6 flex-col'>
-                <div className='text-[25px] leading-[29.55px] text-white'>
+                <div className='text-[25px] leading-[29.55px] max-md:text-[18px] max-md:leading-[40px] text-white'>
                   What will you like to do?
                 </div>
 
@@ -64,9 +64,9 @@ const WhatWeDoForm = () => {
           </div>
 
           {/* Chat Viewer */}
-          <div className='ml-auto'>
+          <div className='ml-auto max-md:hidden'>
             <div className='items-center flex flex-col gap-12'>
-              <div className='text-[30px] leading-[35.85px] text-white -skew-y-6 text-center'>
+              <div className='text-[30px] leading-[35.85px] max-md:text-[18px] max-md:leading-[40px] text-white -skew-y-6 text-center'>
                 Don’t see what you’re looking for?
               </div>
               <DotIconBtn

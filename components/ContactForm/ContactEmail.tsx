@@ -22,7 +22,7 @@ const ContactEmail = () => {
   };
 
   return (
-    <div className='h-[calc(100vh-89px)] grid place-content-center border border-red-500'>
+    <div className='h-[calc(100vh-89px)] grid place-content-center max-md:w-full'>
       <FormComponent
         initialValues={ContactEmailInitialValues}
         schema={ContactEmailSchema}
@@ -30,7 +30,7 @@ const ContactEmail = () => {
       >
         <div className='flex gap-12 flex-col items-center'>
           <div className='flex gap-6 flex-col items-center'>
-            <div className='text-[25px] leading-[29.55px] text-white'>
+            <div className='text-[25px] leading-[29.55px] max-md:text-[18px] max-md:leading-[40px] text-white'>
               Get started with your email
             </div>
             <CenterTextInputField

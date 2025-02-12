@@ -55,7 +55,7 @@ const PhoneNumberInputField: React.FC<PhoneNumberInputFieldProps> = ({
   };
 
   return (
-    <div className='relative border border-yellow-400'>
+    <div className='relative'>
       <div className='text-white grid grid-cols-[82px_1fr] items-center gap-6'>
         <CountrySelectDropDown setSelectedCountryFn={setSelectedCountry} />
 
@@ -65,7 +65,9 @@ const PhoneNumberInputField: React.FC<PhoneNumberInputFieldProps> = ({
           autoFocus={autoFocus}
           value={inputValue}
           onChange={(e) => handleChange(e)}
-          className='font-adventPro font-medium text-[70px] leading-[83.72px] placeholder:text-mason-form-placeholder bg-transparent caret-mason-red text-white appearance-none border-none focus:outline-none w-[500px]'
+          className='font-adventPro font-medium text-[70px] leading-[83.72px] max-md:text-[30px] max-md:leading-[36px]
+           placeholder:text-mason-form-placeholder bg-transparent
+            caret-mason-red text-white appearance-none border-none focus:outline-none w-[500px] max-md:w-full'
         />
       </div>
 

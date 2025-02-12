@@ -59,7 +59,7 @@ const ContactForm = () => {
     // <div ref={containerRef} className='grid *:col-start-1 *:row-start-1'>
     <div
       ref={containerRef}
-      className='relative bg-mason-black w-full max-md:h-screen'
+      className='relative bg-mason-black w-full max-md:h-screen max-md:w-full max-md:overflow-x-hidden max-md:block'
     >
       <div
         className={clsx(

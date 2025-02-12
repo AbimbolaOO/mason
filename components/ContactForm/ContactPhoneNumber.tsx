@@ -37,7 +37,7 @@ const ContactPhoneNumber = () => {
             }}
           />
           <div className='flex gap-6 flex-col'>
-            <div className='text-[25px] leading-[29.55px] text-white'>
+            <div className='text-[25px] leading-[29.55px] max-md:text-[18px] max-md:leading-[40px] text-white'>
               Your Phone Number
             </div>
             <PhoneNumberInputField

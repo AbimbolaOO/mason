@@ -36,7 +36,9 @@ export const TextInputField: React.FC<InputFieldProps> = ({
         autoFocus
         value={inputValue}
         onChange={(e) => handleChange(e)}
-        className='font-adventPro font-medium text-[70px] leading-[83.72px] placeholder:text-mason-form-placeholder bg-transparent caret-mason-red text-white appearance-none border-none focus:outline-none w-[607px]'
+        className={`font-adventPro font-medium text-[70px] leading-[83.72px] max-md:text-[30px] max-md:leading-[36px]
+           placeholder:text-mason-form-placeholder bg-transparent caret-mason-red
+            text-white appearance-none border-none focus:outline-none w-[607px] max-md:w-full`}
       />
 
       {meta.touched && meta.error ? (
@@ -62,8 +64,9 @@ export const CenterTextInputField: React.FC<InputFieldProps> = ({
         // autoFocus
         // onClick={() => setCenterAlign(true)}
         className={clsx(
-          'font-adventPro font-medium text-[70px] leading-[83.72px] placeholder:text-mason-form-placeholder bg-transparent caret-mason-red text-white appearance-none border-none focus:outline-none text-center w-[500px]'
-          // centerAlign ? 'text-center w-[400px]' : 'text-left'
+          `font-adventPro font-medium text-[70px] leading-[83.72px] max-md:text-[30px] max-md:leading-[36px]
+           placeholder:text-mason-form-placeholder bg-transparent caret-mason-red text-white
+            appearance-none border-none focus:outline-none text-center w-[500px] max-md:w-full`
         )}
       />
 

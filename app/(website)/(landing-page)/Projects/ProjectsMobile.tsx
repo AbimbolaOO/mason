@@ -43,7 +43,8 @@ const ProjectsMobile = () => {
         {/* Horizontal scroll section */}
         <div
           ref={containerRef}
-          className='h-[calc(100vh+88px)] -mt-[80px] pt-[80px] bg-mason-black overflow-auto overscroll-x-contain flex flex-col sticky top-[100px] hide-the-scrollbar'
+          // className='h-[calc(100vh+88px)] -mt-[80px] pt-[80px] bg-mason-black overflow-auto overscroll-x-contain flex flex-col sticky top-[100px] hide-the-scrollbar'
+          className='-mt-[80px] pt-[80px] bg-mason-black overflow-auto overscroll-x-contain flex flex-col sticky top-[100px] hide-the-scrollbar'
         >
           <div className='slider-container text-white grid grid-cols-1 mx-4 gap-[54px]'>
             {ProjectData.map((project, index) => (
