@@ -12,7 +12,7 @@ const VerticalSlideContactView = () => {
 
   return (
     <div
-      className='grid grid-cols-2 max-md:flex max-md:flex-col-reverse max-md:w-full max-md:gap-8
+      className='grid grid-cols-2 max-md:w-full max-md:gap-8
     h-[calc(100vh-89px)] items-center px-[120px] max-md:p-4'
     >
       {/* Right verticalSlider */}

@@ -13,7 +13,7 @@ const ContactChatView = () => {
   } = useAppSelector((state) => state.contactData);
 
   return (
-    <div className='ml-auto max-md:ml-0 z-20 '>
+    <div className='ml-auto max-md:ml-0 z-20 max-md:hidden'>
       <div className='bg-[#272727] w-[327px] max-md:w-full p-4 rounded-[24px] text-white flex flex-col gap-[19px]'>
         {/* Number View */}
         {fullName && slideIndex >= 2 && (

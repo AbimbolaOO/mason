@@ -148,10 +148,10 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
       {/* LEFT TEXT AREA */}
       <div className='text-white  w-[540px] ml-20'>
         {/* Text Area */}
-        <div className='text-[2.5vh] leading-[4.4vh] flex flex-col gap-6'>
+        <div className='text-[20px] leading-[40px] flex flex-col gap-6'>
           {/* Top */}
           <div className='flex flex-col gap-8'>
-            <div className='font-semibold text-[10vh] leading-[10vh] font-adventPro'>
+            <div className='font-semibold text-[70px] leading-[70px] font-adventPro'>
               {title}
             </div>
             <div className=''>{description}</div>
@@ -159,7 +159,7 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
 
           {/* Bottom */}
           <div className='flex flex-col gap-8'>
-            <div className='font-semibold text-[10vh] leading-[10vh] font-adventPro'>
+            <div className='font-semibold text-[70px] leading-[70px] font-adventPro'>
               Services Offered
             </div>
             <div>
@@ -182,18 +182,15 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
       </div>
 
       {/* Project Image Area */}
-      <div className='w-[100vw] flex flex-col p-0 justify-center relative'>
-        <div className='grid p-0 justify-center relative h-[80vh] aspect-video '>
-          <Image
-            src={`/static/img/${projectImageName}.png`}
-            alt={`${projectImageName}`}
-            // width={838}
-            // height={653}
-            fill
-            priority
-            className='object-contain w-full'
-          />
-        </div>
+      <div className='w-[100vw] grid p-0 justify-center'>
+        <Image
+          src={`/static/img/${projectImageName}.png`}
+          alt={`${projectImageName}`}
+          width={838}
+          height={653}
+          priority
+          className=''
+        />
 
         <NextProjectSlide linkToProject={linkToProject} />
       </div>
