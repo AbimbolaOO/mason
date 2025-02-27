@@ -58,6 +58,7 @@ const Carousel = () => {
           <EthiopianIcon />
         </div>
         <div className='slide w-[calc(50vw-80px)] h-full grid place-content-center absolute -right-[calc(50vw-80px)]'>
+          {/* <DwellingIcon /> */}
           <DwellingIcon />
         </div>
         <div className='slide w-[calc(50vw-80px)] h-full grid place-content-center absolute -right-[calc(50vw-80px)]'>

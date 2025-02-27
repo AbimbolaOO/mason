@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@next/swc-darwin-arm64": "^15.2.0",
     "@reduxjs/toolkit": "^2.5.1",
     "clsx": "^2.1.1",
     "formik": "^2.4.6",

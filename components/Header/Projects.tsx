@@ -2,7 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 
 import DarumHeaderIcon from '../Icons/DarumHeaderIcon';
-import DwellingHeaderIcon from '../Icons/DwellingHeaderIcon';
+// import DwellingHeaderIcon from '../Icons/DwellingHeaderIcon';
+import DwellingIcon from '../Icons/DwellingIcon';
 import EthiopianHeaderIcon from '../Icons/EthiopianHeaderIcon';
 import HeaderDropDown from './HeaderDropDown';
 
@@ -54,7 +55,8 @@ const Projects = () => {
               Dwelling
             </div>
             <div className='bg-mason-black rounded-[11px] flex items-center justify-center h-[158px]'>
-              <DwellingHeaderIcon />
+              {/* <DwellingHeaderIcon /> */}
+              <DwellingIcon />
             </div>
           </div>
         </Link>

@@ -157,15 +157,15 @@ export default function Header({
                 { label: 'Consultancy' },
                 {
                   label: 'Discovery and Planning',
-                  link: 'discovery-and-planning',
+                  // link: 'discovery-and-planning',
                 },
                 {
                   label: 'Design and Prototyping',
-                  link: 'design-and-prototyping',
+                  // link: 'design-and-prototyping',
                 },
                 {
                   label: 'Software and API Development',
-                  link: 'software-and-api-development',
+                  // link: 'software-and-api-development',
                 },
               ]}
               revealFn={() => setReveal(!reveal)}

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import React from 'react';
 
 import HeaderDropDown from './HeaderDropDown';
@@ -25,11 +25,14 @@ const Solutions = () => {
             Free
           </div>
         </div>
-        <Link href={'discovery-and-planning'}>Discovery and Planning</Link>
+        {/* <Link href={'discovery-and-planning'}>Discovery and Planning</Link>
         <Link href={'design-and-prototyping'}>Design and Prototyping</Link>
         <Link href={'software-and-api-development'}>
           Software and API Development
-        </Link>
+        </Link> */}
+        <div>Discovery and Planning</div>
+        <div>Design and Prototyping</div>
+        <div>Software and API Development</div>
       </div>
 
       {/* RIGHT */}

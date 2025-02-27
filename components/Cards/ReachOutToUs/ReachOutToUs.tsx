@@ -111,7 +111,7 @@ const ReachOutToUs = () => {
               <div className='py-2 px-[10px]'>
                 <ArrowDownIcon />
               </div>
-              Continue to Scroll
+              Click to Scroll
               <div className='py-2 px-[10px]'>
                 <ArrowDownIcon />
               </div>

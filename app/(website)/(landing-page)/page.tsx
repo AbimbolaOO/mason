@@ -1,5 +1,5 @@
 import FutureProofDigitalSolutions from './FutureProofDigitalSolutions/FutureProofDigitalSolutions';
-import GlobalOrganization from './GlobalOrganization/GlobalOrganization';
+// import GlobalOrganization from './GlobalOrganization/GlobalOrganization';
 import Hero from './Hero/Hero';
 import Industries from './Industries/Industries';
 import Projects from './Projects/Projects';
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className=''>
       <Hero />
-      <GlobalOrganization />
+      {/* <GlobalOrganization /> */}
       <FutureProofDigitalSolutions />
       <Industries />
       <Projects />
