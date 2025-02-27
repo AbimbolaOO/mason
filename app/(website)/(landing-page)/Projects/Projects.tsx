@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import React, { useRef } from 'react';
 
-import { DotIconBtn } from '@/components/Buttons/Buttons';
+// import { DotIconBtn } from '@/components/Buttons/Buttons';
 import TitleCard from '@/components/Cards/TitleCard/TitleCard';
 import ArrowRightIcon from '@/components/Icons/ArrowRightIcon';
 import { useGSAP } from '@gsap/react';
@@ -133,7 +133,7 @@ interface HorizontalScrollProjectCards {
   description: string;
   servicesOffered: string[];
   projectImageName: string;
-  linkToProject: string;
+  // linkToProject: string;
 }
 
 const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
@@ -141,7 +141,7 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
   description,
   servicesOffered,
   projectImageName,
-  linkToProject,
+  // linkToProject,
 }) => {
   return (
     <>
@@ -151,7 +151,7 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
         <div className='text-[2.5vh] leading-[4.4vh] flex flex-col gap-6'>
           {/* Top */}
           <div className='flex flex-col gap-8'>
-            <div className='font-semibold text-[10vh] leading-[10vh] font-adventPro'>
+            <div className='font-semibold text-[9vh] leading-[9vh] font-adventPro'>
               {title}
             </div>
             <div className=''>{description}</div>
@@ -173,17 +173,17 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
 
           {/* Button Area */}
           {/* <LaunchProjectBtn linkToProject={linkToProject} /> */}
-          <DotIconBtn
+          {/* <DotIconBtn
             label='Launch Project'
             href={linkToProject}
             target='_blank'
-          />
+          /> */}
         </div>
       </div>
 
       {/* Project Image Area */}
       <div className='w-[100vw] flex flex-col p-0 justify-center relative'>
-        <div className='grid p-0 justify-center relative h-[80vh] aspect-video '>
+        <div className='grid p-0 justify-center relative h-[70vh] aspect-video '>
           <Image
             src={`/static/img/${projectImageName}.png`}
             alt={`${projectImageName}`}
@@ -195,28 +195,39 @@ const HorizontalScrollProjectCards: React.FC<HorizontalScrollProjectCards> = ({
           />
         </div>
 
-        <NextProjectSlide linkToProject={linkToProject} />
+        <NextProjectSlide
+          // linkToProject={linkToProject}
+          label={title}
+        />
       </div>
     </>
   );
 };
 
-const NextProjectSlide = ({ linkToProject }: { linkToProject: string }) => {
+const NextProjectSlide = ({
+  // linkToProject,
+  label,
+}: {
+  // linkToProject: string;
+  label?: string;
+}) => {
   return (
     <div className='next-prj-container w-fit self-center justify-self-center'>
       <div className='next-prj-slide flex gap-[49px] justify-center w-fit invisible opacity-0'>
         {/* <LaunchProjectBtn linkToProject={linkToProject} /> */}
-        <DotIconBtn
+        {/* <DotIconBtn
           label='Launch Project'
           href={linkToProject}
           target='_blank'
-        />
+        /> */}
         <div className='flex flex-col'>
           <div className='text-[15px] leading-[20px] text-mason-grey'>
             Keep Scrolling to
           </div>
           <div className='text-white flex items-center gap-2'>
-            <div className='text-xl leading-[20px]'>Next Project</div>
+            <div className='text-xl leading-[20px]'>
+              {label === 'Dwelling' ? 'Contact us' : 'Next Project'}
+            </div>
             <div className='w-[120px] h-[3px] bg-mason-border-transparent'></div>
             <ArrowRightIcon currentColor className='arrow-btn' />
           </div>
