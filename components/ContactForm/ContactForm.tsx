@@ -4,12 +4,17 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useRef } from 'react';
 
-import ExecutionIcon from '@/components/Icons/ExecutionIcon';
-import PlanningIcon from '@/components/Icons/PlanningIcon';
-import SpeedIcon from '@/components/Icons/SpeedIcon';
 import { useAppSelector } from '@/redux/store';
 import { useGSAP } from '@gsap/react';
 
+import HiIcon from '../Icons/HiIcon';
+import HiMobileIcon from '../Icons/HiMobileIcon';
+import HowCanWeHelpYouIcon from '../Icons/HowCanWeHelpYouIcon';
+import HowCanWeHelpYouMobileIcon from '../Icons/HowCanWeHelpYouMobileIcon';
+import LetKnowYouBetter from '../Icons/LetKnowYouBetter';
+import LetKnowYouBetterMobileIcon from '../Icons/LetKnowYouBetterMobileIcon';
+import WhatDoYouNeed from '../Icons/WhatDoYouNeed';
+import WhatDoYouNeedMobile from '../Icons/WhatDoYouNeedMobile';
 import ContactEmail from './ContactEmail';
 import VerticalSlideContactView from './VerticalSlideContactView';
 import WhatWeDoForm from './WhatWeDoForm';
@@ -63,29 +68,72 @@ const ContactForm = () => {
     >
       <div
         className={clsx(
-          'show-icon hand-icon absolute bottom-[calc(50%-200px)] left-[calc(50%-200px)] h-fit invisible opacity-0 z-0',
+          'show-icon max-md:hidden hand-icon absolute bottom-[calc(50%-200px)] left-[calc(50%-200px)] h-fit invisible opacity-0 z-0',
           slideIndex > 2 ? 'hidden' : 'block'
         )}
       >
-        <PlanningIcon />
+        <HiIcon />
       </div>
       <div
         className={clsx(
-          `show-icon hi-icon absolute bottom-[calc(50%-200px)] left-[calc(50%-200px)] h-fit invisible opacity-0 z-0`,
+          `show-icon max-md:hidden hi-icon absolute bottom-[calc(50%-200px)] left-[calc(50%-200px)] h-fit invisible opacity-0 z-0`,
           slideIndex >= 1 ? 'hidden' : 'block'
         )}
       >
-        <ExecutionIcon />
+        <HowCanWeHelpYouIcon />
       </div>
       <div
         className={clsx(
-          'show-icon what-icon absolute bottom-[calc(50%-200px)] left-[calc(50%-200px)] h-fit invisible opacity-0 z-0',
+          'show-icon max-md:hidden what-icon absolute bottom-[calc(50%-200px)] left-[calc(50%-200px)] h-fit invisible opacity-0 z-0',
+          slideIndex === 1 ? 'hidden' : 'block'
+        )}
+      >
+        <WhatDoYouNeed />
+      </div>
+
+      <div
+        className={clsx(
+          'show-icon max-md:hidden what-icon absolute bottom-[calc(40%-200px)] left-[calc(50%-200px)] h-fit invisible opacity-0 z-0',
+          slideIndex !== 1 ? 'hidden' : 'block'
+        )}
+      >
+        <LetKnowYouBetter />
+      </div>
+
+      {/* <Mobile> */}
+      <div
+        className={clsx(
+          'show-icon md:hidden hand-icon absolute bottom-[calc(60%-200px)] left-[calc(70%-200px)] h-fit invisible opacity-0 z-0',
           slideIndex > 2 ? 'hidden' : 'block'
         )}
       >
-        <SpeedIcon />
+        <HiMobileIcon />
       </div>
-      {/* </div> */}
+      <div
+        className={clsx(
+          `show-icon md:hidden hi-icon absolute top-[calc(100%-300px)] left-[calc(0%+210px)] h-fit invisible opacity-0 z-0`,
+          slideIndex >= 1 ? 'hidden' : 'block'
+        )}
+      >
+        <HowCanWeHelpYouMobileIcon />
+      </div>
+      <div
+        className={clsx(
+          'show-icon md:hidden what-icon absolute bottom-[calc(50%-200px)] right-[calc(200px)] h-fit invisible opacity-0 z-0',
+          slideIndex === 1 ? 'hidden' : 'block'
+        )}
+      >
+        <WhatDoYouNeedMobile />
+      </div>
+
+      <div
+        className={clsx(
+          'show-icon md:hidden what-icon absolute bottom-[calc(40%-200px)] right-[calc(50%+100px)] h-fit invisible opacity-0 z-0',
+          slideIndex !== 1 ? 'hidden' : 'block'
+        )}
+      >
+        <LetKnowYouBetterMobileIcon />
+      </div>
 
       {/* Foreground */}
       {/* <div className='h-fit flex'> */}

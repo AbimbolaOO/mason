@@ -2,10 +2,7 @@
 import React from 'react';
 
 import { BackButtons, DotIconBtn } from '@/components/Buttons/Buttons';
-import {
-  CustomRadio,
-  CustomRadioGroup,
-} from '@/components/FormComponent/CustomRadioButton';
+import { CustomRadio, CustomRadioGroup } from '@/components/FormComponent/CustomRadioButton';
 import { FormComponent } from '@/components/FormComponent/FormComponent';
 import SubmitButton from '@/components/FormComponent/SubmitButton';
 import {
@@ -60,7 +57,7 @@ const WhatWeDoForm = () => {
               </div>
             </div>
 
-            <SubmitButton />
+            <SubmitButton showSubmit />
           </div>
 
           {/* Chat Viewer */}

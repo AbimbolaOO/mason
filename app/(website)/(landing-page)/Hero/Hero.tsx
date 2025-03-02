@@ -3,8 +3,11 @@ import gsap from 'gsap';
 import React, { useRef } from 'react';
 
 import ExecutionIcon from '@/components/Icons/ExecutionIcon';
+import ExecutionSmallIcon from '@/components/Icons/ExecutionSmallIcon';
 import PlanningIcon from '@/components/Icons/PlanningIcon';
+import PlanningSmallIcon from '@/components/Icons/PlanningSmallIcon';
 import SpeedIcon from '@/components/Icons/SpeedIcon';
+import SpeedSmallIcon from '@/components/Icons/SpeedSmallIcon';
 import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP);
@@ -111,13 +114,13 @@ export default function Hero() {
       </div>
 
       <div className='md:hidden absolute top-[-5vh] right-[3vw] z-10'>
-        <PlanningIcon className='w-[250px]' />
+        <PlanningSmallIcon className='w-[250px]' />
       </div>
       <div className='md:hidden absolute bottom-[10vh] right-[1vw]'>
-        <ExecutionIcon className='w-[250px]' />
+        <ExecutionSmallIcon className='w-[250px]' />
       </div>
-      <div className='md:hidden absolute top-[60vh] left-[-10vw]'>
-        <SpeedIcon className='w-[250px]' />
+      <div className='md:hidden absolute top-[60vh] left-[0vw]'>
+        <SpeedSmallIcon className='w-[250px]' />
       </div>
 
       {/* Actual Content */}
